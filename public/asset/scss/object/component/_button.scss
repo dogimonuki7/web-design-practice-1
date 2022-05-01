@@ -5,11 +5,10 @@
 	padding: 8px 24px;
 	color: $color-base;
 	background-color: $color-primary;
-	border: solid 1px $color-primary;
-	border-radius: 16px;
-	font-weight: bold;
+	border-radius: 100px;
+	font-weight: 700;
 	text-decoration: none;
-	&:hover {
-		color: $color-primary-light;
+  &:hover {
+		background-color: $color-primary-light;
 	}
 }

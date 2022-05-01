@@ -72,13 +72,12 @@ a:hover img {
   padding: 8px 24px;
   color: #fff;
   background-color: #0068B7;
-  border: solid 1px #0068B7;
-  border-radius: 16px;
-  font-weight: bold;
+  border-radius: 100px;
+  font-weight: 700;
   text-decoration: none;
 }
 .c-button:hover {
-  color: #3d8cc8;
+  background-color: #3d8cc8;
 }
 
 .c-inner {
