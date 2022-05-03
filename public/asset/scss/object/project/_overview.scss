@@ -1,0 +1,12 @@
+@use "./../../foundation/variable" as *;
+
+.p-overview {
+	&__content {
+		display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 480px;
+    margin: 0 auto;
+	}
+}

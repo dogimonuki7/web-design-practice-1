@@ -1,0 +1,16 @@
+@use "./../../foundation/variable" as *;
+
+.c-section {
+	padding: 48px 0;
+	background-color: $color-main-100;
+	&:nth-of-type(odd) {
+		background-color: $color-base;
+	}
+
+  &__title {
+		text-align: center;
+		font-size: 1.5rem;
+		font-weight: 700;
+		margin-bottom: 32px;
+	}
+}
