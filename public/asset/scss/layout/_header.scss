@@ -5,10 +5,10 @@
 	top: 0;
 	background-color: $color-base;
 	z-index: 1;
-  height: 60px;
-  box-shadow: 0 1px 2px 0 rgba(0,0,0,.24);
+  box-shadow: 0 2px 4px 1px rgba(0,0,0,.24);
 
 	&__content {
+    height: 60px;
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
