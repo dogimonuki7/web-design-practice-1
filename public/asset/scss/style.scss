@@ -12,22 +12,17 @@
 /*--------------------------------------*
 * object
 *--------------------------------------*/
-/*-------------------
-* component
--------------------*/
+/* component */
 @use "./object/component/button";
 @use "./object/component/inner";
 @use "./object/component/section";
 
-/*-------------------
-* project
--------------------*/
+/* project */
 @use "./object/project/fv";
 @use "./object/project/overview";
+@use "./object/project/concept";
 
-/*-------------------
-* utility
--------------------*/
+/* utility */
 
 
 

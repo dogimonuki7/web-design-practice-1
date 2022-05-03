@@ -155,6 +155,50 @@ a:hover img {
   margin: 0 auto;
 }
 
+.p-concept__content {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  max-width: 480px;
+  margin: 0 auto 24px;
+}
+.p-concept__list {
+  display: grid;
+  row-gap: 16px;
+}
+@media (min-width: 750px) {
+  .p-concept__list {
+    display: grid;
+    -moz-column-gap: 16px;
+         column-gap: 16px;
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+.p-concept__item {
+  border-radius: 16px;
+  background-color: #fff;
+  box-shadow: 0 0.1px 1px 0 rgba(0, 0, 0, 0.24), 0 2px 4px 1px rgba(0, 0, 0, 0.24);
+  padding: 16px 16px 24px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+.p-concept__item h3 {
+  text-align: center;
+  font-size: 1.25rem;
+  color: #0068B7;
+  font-weight: 700;
+  margin-bottom: 16px;
+}
+.p-concept__item img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  margin-bottom: 24px;
+}
+
 /*--------------------------------------*
  * foundation
  *--------------------------------------*/
@@ -164,13 +208,7 @@ a:hover img {
 /*--------------------------------------*
 * object
 *--------------------------------------*/
-/*-------------------
-* component
--------------------*/
-/*-------------------
-* project
--------------------*/
-/*-------------------
-* utility
--------------------*/
+/* component */
+/* project */
+/* utility */
 /*# sourceMappingURL=style.css.map */
