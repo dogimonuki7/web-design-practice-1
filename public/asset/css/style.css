@@ -80,6 +80,19 @@ a:hover img {
   background-color: #3d8cc8;
 }
 
+.c-button-secondary {
+  display: inline-block;
+  padding: 8px 24px;
+  color: #0068B7;
+  border: 1px solid #0068B7;
+  border-radius: 100px;
+  font-weight: 700;
+  text-decoration: none;
+}
+.c-button-secondary:hover {
+  background-color: rgba(0, 104, 183, 0.24);
+}
+
 .c-button-white {
   display: inline-block;
   padding: 8px 24px;
@@ -90,7 +103,7 @@ a:hover img {
   text-decoration: none;
 }
 .c-button-white:hover {
-  background-color: #3d8cc8;
+  background-color: rgba(0, 104, 183, 0.24);
 }
 
 .c-inner {
@@ -159,7 +172,6 @@ a:hover img {
   display: flex;
   align-items: center;
   flex-direction: column;
-  justify-content: center;
   max-width: 480px;
   margin: 0 auto 24px;
 }
@@ -183,7 +195,6 @@ a:hover img {
   display: flex;
   align-items: center;
   flex-direction: column;
-  justify-content: center;
 }
 .p-concept__item h3 {
   text-align: center;
@@ -197,6 +208,24 @@ a:hover img {
   height: 80px;
   border-radius: 50%;
   margin-bottom: 24px;
+}
+.p-concept__item p {
+  flex-grow: 1;
+  margin-bottom: 24px;
+}
+.p-concept__item a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.p-concept__item a:after {
+  content: "";
+  margin-left: 8px;
+  width: 10px;
+  height: 10px;
+  border-top: 2px solid #0068B7;
+  border-right: 2px solid #0068B7;
+  transform: rotate(45deg);
 }
 
 /*--------------------------------------*
