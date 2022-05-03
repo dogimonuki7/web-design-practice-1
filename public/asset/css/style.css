@@ -114,10 +114,10 @@ a:hover img {
 
 .c-section {
   padding: 48px 0;
-  background-color: #f8f9fa;
+  background-color: #e9ecef;
 }
 .c-section:nth-of-type(odd) {
-  background-color: #fff;
+  background-color: #f8f9fa;
 }
 .c-section__title {
   text-align: center;
