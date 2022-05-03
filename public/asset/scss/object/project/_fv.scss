@@ -1,17 +1,29 @@
 @use "./../../foundation/variable" as *;
 
 .p-fv {
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  position: absolute;
-  height: 560px;
+  color: $color-white;
   background-size: cover;
-  background-position: center center;
+  background-position: 50%;
   background-repeat: no-repeat;
   background-image: url(https://kobayashi555.netlify.app/asset/img/night-sky.webp);
+
+  &__content {
+		display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 460px;
+
+		h1 {
+			font-size: 2rem;
+			line-height: 1.25;
+      font-weight: 700;
+			margin-bottom: 24px;
+		}
+		p {
+			font-size: 1.5rem;
+      font-weight: 400;
+			margin-bottom: 24px;
+		}
+	}
 }
-
-
-

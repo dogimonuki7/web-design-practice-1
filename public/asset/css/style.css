@@ -18,7 +18,7 @@ body {
   color: rgba(0, 0, 0, 0.83);
   font-size: 1rem;
   font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
-  min-width: 350px;
+  min-width: 320px;
   width: 100%;
   overflow-x: hidden;
 }
@@ -67,7 +67,7 @@ a:hover img {
   max-width: 40%;
 }
 
-.c-button {
+.c-button-primary {
   display: inline-block;
   padding: 8px 24px;
   color: #fff;
@@ -76,7 +76,20 @@ a:hover img {
   font-weight: 700;
   text-decoration: none;
 }
-.c-button:hover {
+.c-button-primary:hover {
+  background-color: #3d8cc8;
+}
+
+.c-button-white {
+  display: inline-block;
+  padding: 8px 24px;
+  color: #fff;
+  border: 1px solid #fff;
+  border-radius: 100px;
+  font-weight: 700;
+  text-decoration: none;
+}
+.c-button-white:hover {
   background-color: #3d8cc8;
 }
 
@@ -87,16 +100,29 @@ a:hover img {
 }
 
 .p-fv {
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  position: absolute;
-  height: 560px;
+  color: #fff;
   background-size: cover;
-  background-position: center center;
+  background-position: 50%;
   background-repeat: no-repeat;
   background-image: url(https://kobayashi555.netlify.app/asset/img/night-sky.webp);
+}
+.p-fv__content {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 460px;
+}
+.p-fv__content h1 {
+  font-size: 2rem;
+  line-height: 1.25;
+  font-weight: 700;
+  margin-bottom: 24px;
+}
+.p-fv__content p {
+  font-size: 1.5rem;
+  font-weight: 400;
+  margin-bottom: 24px;
 }
 
 /*--------------------------------------*
