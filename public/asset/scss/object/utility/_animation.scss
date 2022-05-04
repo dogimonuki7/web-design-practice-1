@@ -4,6 +4,17 @@
 .u-fade-in {
   opacity: 0;
 
+  &.up {
+    transform: translateY(100px);
+  }
+
+  &.left {
+    transform: translateX(-100px);
+  }
+  &.right {
+    transform: translateX(100px);
+  }
+
   &__active {
     animation-name: fade-in-anime;
     animation-duration: 0.5s;
@@ -15,7 +26,6 @@
 @keyframes fade-in-anime{
   from {
     opacity: 0;
-    transform: translateY(100px);
   }
 
   to {

@@ -360,6 +360,15 @@ a:hover img {
 .u-fade-in {
   opacity: 0;
 }
+.u-fade-in.up {
+  transform: translateY(100px);
+}
+.u-fade-in.left {
+  transform: translateX(-100px);
+}
+.u-fade-in.right {
+  transform: translateX(100px);
+}
 .u-fade-in__active {
   -webkit-animation-name: fade-in-anime;
           animation-name: fade-in-anime;
@@ -373,7 +382,6 @@ a:hover img {
 @-webkit-keyframes fade-in-anime {
   from {
     opacity: 0;
-    transform: translateY(100px);
   }
   to {
     opacity: 1;
@@ -384,7 +392,6 @@ a:hover img {
 @keyframes fade-in-anime {
   from {
     opacity: 0;
-    transform: translateY(100px);
   }
   to {
     opacity: 1;
@@ -469,6 +476,8 @@ a:hover img {
           animation-duration: 1s;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
+  -webkit-animation-timing-function: cubic-bezier(0.98, -0.04, 0.32, 0.91);
+          animation-timing-function: cubic-bezier(0.98, -0.04, 0.32, 0.91);
   content: "";
   position: absolute;
   width: 100%;

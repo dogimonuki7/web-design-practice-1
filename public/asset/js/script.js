@@ -1,8 +1,4 @@
-
-
-
-
-
+// フェードインアニメーション
 const fadeIns = document.querySelectorAll('.u-fade-in');
 const fadeIn = new IntersectionObserver(fadeAnime);
 
@@ -18,6 +14,7 @@ function fadeAnime(entries){
   });
 };
 
+// テキスト背景アニメーション
 const bgLRextends = document.querySelectorAll('.bgLRextendTrigger');
 const bgLRextend = new IntersectionObserver(bgLRextendAnime);
 
@@ -32,7 +29,6 @@ function bgLRextendAnime(entries){
     }
   });
 };
-
 
 const bgappears = document.querySelectorAll('.bgappearTrigger');
 const bgappear = new IntersectionObserver(bgappearAnime);
