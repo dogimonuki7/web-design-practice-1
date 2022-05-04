@@ -10,7 +10,7 @@
 	}
 	&__list {
     display: grid;
-    row-gap: 16px;
+    row-gap: 32px;
 	}
 
   @include breakpoint(tablet) {
@@ -20,7 +20,7 @@
       display: grid;
       column-gap: 16px;
       grid-template-columns: repeat(3, 1fr);
-    }      
+    }
 	}
 
   &__item {
@@ -44,10 +44,10 @@
       width: 80px;
       height: 80px;
       border-radius: 50%;
-      margin-bottom: 24px;
+      margin-bottom: 16px;
     }
 
-    p {
+    figcaption {
       flex-grow: 1;
       margin-bottom: 24px;
     }
@@ -67,5 +67,4 @@
       }
     }
   }
-  
 }
