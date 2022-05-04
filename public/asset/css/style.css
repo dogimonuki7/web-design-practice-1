@@ -145,6 +145,9 @@ a:hover img {
   background-repeat: no-repeat;
   background-image: url(https://kobayashi555.netlify.app/asset/img/night-sky.webp);
 }
+.p-fv__text-bg-color {
+  background-color: #fff;
+}
 .p-fv__content {
   display: flex;
   align-items: center;
@@ -319,7 +322,7 @@ a:hover img {
   height: 10px;
   border-top: 2px solid #0068B7;
   border-right: 2px solid #0068B7;
-  transform: rotate(-45deg);
+  transform: rotate(135deg);
   transition: transform 0.3s;
 }
 .p-faq__answer {
@@ -327,7 +330,7 @@ a:hover img {
   margin-bottom: 32px;
 }
 .p-faq__details[open] .p-faq__summary:after {
-  transform: rotate(135deg);
+  transform: rotate(-45deg);
 }
 .p-faq__details[open] .p-faq__answer {
   -webkit-animation: fadeIn 0.4s ease;
@@ -354,7 +357,51 @@ a:hover img {
   }
 }
 
-.u-bgextend {
+.u-fade-in {
+  opacity: 0;
+}
+.u-fade-in__active {
+  -webkit-animation-name: fade-in-anime;
+          animation-name: fade-in-anime;
+  -webkit-animation-duration: 0.5s;
+          animation-duration: 0.5s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  opacity: 0;
+}
+
+@-webkit-keyframes fade-in-anime {
+  from {
+    opacity: 0;
+    transform: translateY(100px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fade-in-anime {
+  from {
+    opacity: 0;
+    transform: translateY(100px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.u-delay-02 {
+  -webkit-animation-delay: 0.2s;
+          animation-delay: 0.2s;
+}
+
+.u-delay-04 {
+  -webkit-animation-delay: 0.4s;
+          animation-delay: 0.4s;
+}
+
+.bgextend {
   -webkit-animation-name: bgextendAnimeBase;
           animation-name: bgextendAnimeBase;
   -webkit-animation-duration: 1s;
@@ -385,7 +432,7 @@ a:hover img {
   }
 }
 /*中の要素*/
-.u-bgappear {
+.bgappear {
   -webkit-animation-name: bgextendAnimeSecond;
           animation-name: bgextendAnimeSecond;
   -webkit-animation-duration: 1s;
@@ -415,7 +462,7 @@ a:hover img {
   }
 }
 /*左から右*/
-.u-bgLRextend:before {
+.bgLRextend::before {
   -webkit-animation-name: bgLRextendAnime;
           animation-name: bgLRextendAnime;
   -webkit-animation-duration: 1s;
@@ -466,8 +513,8 @@ a:hover img {
   }
 }
 /* スクロールをしたら出現する要素にはじめに透過0を指定　*/
-.u-bgappear-trigger,
-.u-bgLRextend-trigger {
+.bgappearTrigger,
+.bgLRextendTrigger {
   opacity: 0;
 }
 

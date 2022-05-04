@@ -1,4 +1,42 @@
-.u-bgextend{
+@use "./../../foundation/variable" as *;
+
+// フェードイン
+.u-fade-in {
+  opacity: 0;
+
+  &__active {
+    animation-name: fade-in-anime;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+    opacity: 0;
+	}
+}
+
+@keyframes fade-in-anime{
+  from {
+    opacity: 0;
+    transform: translateY(100px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.u-delay-02 {
+  animation-delay: .2s;
+}
+
+.u-delay-04 {
+  animation-delay: .4s;
+}
+
+
+
+
+
+.bgextend{
   animation-name:bgextendAnimeBase;
   animation-duration:1s;
   animation-fill-mode:forwards;
@@ -18,7 +56,7 @@
 }
 
 /*中の要素*/
-.u-bgappear{
+.bgappear{
   animation-name:bgextendAnimeSecond;
   animation-duration:1s;
   animation-delay: 0.6s;
@@ -36,19 +74,16 @@
 }
 
 /*左から右*/
-.u-bgLRextend {
-  &:before{
-    animation-name:bgLRextendAnime;
-    animation-duration:1s;
-    animation-fill-mode:forwards;
-      content: "";
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      background-color: black;/*伸びる背景色の設定*/
-  }
+.bgLRextend::before{
+  animation-name:bgLRextendAnime;
+  animation-duration:1s;
+  animation-fill-mode:forwards;
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: black;/*伸びる背景色の設定*/
 }
-
 @keyframes bgLRextendAnime{
   0% {
     transform-origin:left;
@@ -68,7 +103,9 @@
 }
 
 /* スクロールをしたら出現する要素にはじめに透過0を指定　*/
-.u-bgappear-trigger,
-.u-bgLRextend-trigger{
+.bgappearTrigger,
+.bgLRextendTrigger{
     opacity: 0;
 }
+
+

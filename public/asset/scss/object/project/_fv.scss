@@ -7,6 +7,10 @@
   background-repeat: no-repeat;
   background-image: url(https://kobayashi555.netlify.app/asset/img/night-sky.webp);
 
+  &__text-bg-color{
+    background-color: #fff;
+  }
+
   &__content {
 		display: flex;
     align-items: center;

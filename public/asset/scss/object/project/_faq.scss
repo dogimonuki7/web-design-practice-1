@@ -33,7 +33,7 @@
       height: 10px;
       border-top: 2px solid $color-primary;
       border-right: 2px solid $color-primary;
-      transform: rotate(-45deg);
+      transform: rotate(135deg);
       transition: transform .3s;
 		}
   }
@@ -46,7 +46,7 @@
 	&__details[open] {
 		.p-faq__summary {
 			&:after {
-				transform: rotate(135deg);
+				transform: rotate(-45deg);
 			}
 		}
 		.p-faq__answer {
