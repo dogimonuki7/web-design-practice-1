@@ -1,0 +1,66 @@
+@use "./../../foundation/variable" as *;
+
+.p-faq {
+  &__content {
+		max-width: 640px;
+		margin: 0 auto;
+	}
+
+	&__details {
+    border-bottom: 1px solid rgba($color-primary,.12);
+		margin-bottom: 8px;
+	}
+
+  &__summary {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 24px;
+    cursor: pointer;
+
+		&:hover {
+			background-color: rgba($color-primary,.12);
+		}
+
+		&::-webkit-details-marker {
+			display: none;
+		}
+
+		&:after {
+      content: '';
+      margin-left: 16px;
+      width: 10px;
+      height: 10px;
+      border-top: 2px solid $color-primary;
+      border-right: 2px solid $color-primary;
+      transform: rotate(-45deg);
+      transition: transform .3s;
+		}
+  }
+
+  &__answer {
+		padding: 16px 24px;
+		margin-bottom: 32px;
+	}
+
+	&__details[open] {
+		.p-faq__summary {
+			&:after {
+				transform: rotate(135deg);
+			}
+		}
+		.p-faq__answer {
+			animation: fadeIn 0.4s ease;
+			@keyframes fadeIn {
+				0% {
+					opacity: 0;
+          transform: translateY(-10px);
+				}
+				100% {
+					opacity: 1;
+          transform: none;
+				}
+			}
+		}
+	}
+}

@@ -8,6 +8,7 @@
 * layout
 *--------------------------------------*/
 @use "./layout/header";
+@use "./layout/footer";
 
 /*--------------------------------------*
 * object
@@ -22,6 +23,7 @@
 @use "./object/project/overview";
 @use "./object/project/concept";
 @use "./object/project/point";
+@use "./object/project/faq";
 
 /* utility */
 

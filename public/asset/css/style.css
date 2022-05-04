@@ -67,6 +67,17 @@ a:hover img {
   max-width: 40%;
 }
 
+.l-footer {
+  background-color: #333;
+  color: #fff;
+}
+.l-footer__content {
+  padding: 24px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
 .c-button-primary {
   display: inline-block;
   padding: 8px 24px;
@@ -277,6 +288,69 @@ a:hover img {
   width: 100%;
   height: auto;
   border-radius: 16px;
+}
+
+.p-faq__content {
+  max-width: 640px;
+  margin: 0 auto;
+}
+.p-faq__details {
+  border-bottom: 1px solid rgba(0, 104, 183, 0.12);
+  margin-bottom: 8px;
+}
+.p-faq__summary {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 24px;
+  cursor: pointer;
+}
+.p-faq__summary:hover {
+  background-color: rgba(0, 104, 183, 0.12);
+}
+.p-faq__summary::-webkit-details-marker {
+  display: none;
+}
+.p-faq__summary:after {
+  content: "";
+  margin-left: 16px;
+  width: 10px;
+  height: 10px;
+  border-top: 2px solid #0068B7;
+  border-right: 2px solid #0068B7;
+  transform: rotate(-45deg);
+  transition: transform 0.3s;
+}
+.p-faq__answer {
+  padding: 16px 24px;
+  margin-bottom: 32px;
+}
+.p-faq__details[open] .p-faq__summary:after {
+  transform: rotate(135deg);
+}
+.p-faq__details[open] .p-faq__answer {
+  -webkit-animation: fadeIn 0.4s ease;
+          animation: fadeIn 0.4s ease;
+}
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  100% {
+    opacity: 1;
+    transform: none;
+  }
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  100% {
+    opacity: 1;
+    transform: none;
+  }
 }
 
 /*--------------------------------------*

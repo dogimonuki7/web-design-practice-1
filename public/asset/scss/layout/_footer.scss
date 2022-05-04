@@ -1,0 +1,13 @@
+@use "./../foundation/variable" as *;
+
+.l-footer {
+	background-color: $color-black;
+	color: $color-base;
+
+	&__content {
+    padding: 24px 0;
+		display: flex;
+		justify-content: space-between;
+		align-items: flex-end;
+	}
+}
