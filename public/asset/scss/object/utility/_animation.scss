@@ -78,6 +78,7 @@
   animation-name:bgLRextendAnime;
   animation-duration:1s;
   animation-fill-mode:forwards;
+  animation-timing-function: cubic-bezier(0.98, -0.04, 0.32, 0.91);
     content: "";
     position: absolute;
     width: 100%;
