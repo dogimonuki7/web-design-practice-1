@@ -22,11 +22,9 @@
     font-size: 1.25rem;
     color: $color-primary;
     font-weight: 700;
-    margin-bottom: 16px;
+    margin-bottom: 8px;
   }
 
-  @include breakpoint(tablet) {
-	}
   @include breakpoint(pc) {
     &__item {
       display: flex;

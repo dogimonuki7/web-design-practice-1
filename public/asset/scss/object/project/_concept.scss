@@ -13,8 +13,6 @@
     row-gap: 32px;
 	}
 
-  @include breakpoint(tablet) {
-	}
   @include breakpoint(pc) {
     &__list {
       display: grid;
@@ -37,7 +35,7 @@
       font-size: 1.25rem;
       color: $color-primary;
       font-weight: 700;
-      margin-bottom: 16px;
+      margin-bottom: 8px;
     }
 
     img {

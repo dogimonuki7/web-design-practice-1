@@ -16,13 +16,8 @@ $shadow-base: 0 .1px 1px 0 rgba(0,0,0,.24), 0 1px 2px 0 rgba(0,0,0,.24);
 // breakpoint
 // ──────────────────────────────
 @mixin breakpoint($point) {
-	@if $point == tablet {
-		@media (min-width: 640px) {
-			@content;
-		}
-	}
 	@if $point == pc {
-		@media (min-width: 750px) {
+		@media (min-width: 640px) {
 			@content;
 		}
 	}
