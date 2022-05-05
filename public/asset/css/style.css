@@ -1,4 +1,3 @@
-@charset "UTF-8";
 /* base
 --------------------------- */
 *,
@@ -69,7 +68,7 @@ a:hover img {
 }
 
 .l-footer {
-  background-color: #333;
+  background-color: #000;
   color: #fff;
 }
 .l-footer__content {
@@ -357,15 +356,15 @@ a:hover img {
   }
 }
 
-.u-animation {
+.u-fade-up-trigger {
   opacity: 0;
 }
 
-.u-fade-up__active {
+.u-fade-up {
   -webkit-animation-name: fade-up-anime;
           animation-name: fade-up-anime;
-  -webkit-animation-duration: 0.5s;
-          animation-duration: 0.5s;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
   opacity: 0;
@@ -392,11 +391,15 @@ a:hover img {
     transform: translateY(0);
   }
 }
-.u-fade-left__active {
+.u-fade-left-trigger {
+  opacity: 0;
+}
+
+.u-fade-left {
   -webkit-animation-name: fade-left-anime;
           animation-name: fade-left-anime;
-  -webkit-animation-duration: 0.5s;
-          animation-duration: 0.5s;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
   opacity: 0;
@@ -423,11 +426,15 @@ a:hover img {
     transform: translateY(0);
   }
 }
-.u-fade-right__active {
+.u-fade-right-trigger {
+  opacity: 0;
+}
+
+.u-fade-right {
   -webkit-animation-name: fade-right-anime;
           animation-name: fade-right-anime;
-  -webkit-animation-duration: 0.5s;
-          animation-duration: 0.5s;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
   opacity: 0;
@@ -454,71 +461,30 @@ a:hover img {
     transform: translateY(0);
   }
 }
-.u-fade-in {
-  opacity: 0;
-}
-.u-fade-in.up {
-  transform: translateY(100px);
-}
-.u-fade-in.left {
-  transform: translateX(-100px);
-}
-.u-fade-in.right {
-  transform: translateX(100px);
-}
-.u-fade-in__active {
-  -webkit-animation-name: fade-in-anime;
-          animation-name: fade-in-anime;
-  -webkit-animation-duration: 0.5s;
-          animation-duration: 0.5s;
-  -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
-  opacity: 0;
-}
-
-@-webkit-keyframes fade-in-anime {
-  from {
-    opacity: 0;
+@media (min-width: 640px) {
+  .u-delay-02 {
+    -webkit-animation-delay: 0.2s;
+            animation-delay: 0.2s;
   }
-  to {
-    opacity: 1;
-    transform: translateY(0);
+
+  .u-delay-04 {
+    -webkit-animation-delay: 0.4s;
+            animation-delay: 0.4s;
   }
 }
-
-@keyframes fade-in-anime {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-.u-delay-02 {
-  -webkit-animation-delay: 0.2s;
-          animation-delay: 0.2s;
-}
-
-.u-delay-04 {
-  -webkit-animation-delay: 0.4s;
-          animation-delay: 0.4s;
-}
-
-.bgextend {
-  -webkit-animation-name: bgextendAnimeBase;
-          animation-name: bgextendAnimeBase;
+.u-bg-extend {
+  -webkit-animation-name: bg-extend-anime;
+          animation-name: bg-extend-anime;
   -webkit-animation-duration: 1s;
           animation-duration: 1s;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
   position: relative;
   overflow: hidden;
-  /*　はみ出た色要素を隠す　*/
   opacity: 0;
 }
 
-@-webkit-keyframes bgextendAnimeBase {
+@-webkit-keyframes bg-extend-anime {
   from {
     opacity: 0;
   }
@@ -527,7 +493,7 @@ a:hover img {
   }
 }
 
-@keyframes bgextendAnimeBase {
+@keyframes bg-extend-anime {
   from {
     opacity: 0;
   }
@@ -535,10 +501,13 @@ a:hover img {
     opacity: 1;
   }
 }
-/*中の要素*/
-.bgappear {
-  -webkit-animation-name: bgextendAnimeSecond;
-          animation-name: bgextendAnimeSecond;
+.u-bg-appear-trigger {
+  opacity: 0;
+}
+
+.u-bg-appear {
+  -webkit-animation-name: bg-appear-anime;
+          animation-name: bg-appear-anime;
   -webkit-animation-duration: 1s;
           animation-duration: 1s;
   -webkit-animation-delay: 0.6s;
@@ -548,7 +517,7 @@ a:hover img {
   opacity: 0;
 }
 
-@-webkit-keyframes bgextendAnimeSecond {
+@-webkit-keyframes bg-appear-anime {
   0% {
     opacity: 0;
   }
@@ -557,7 +526,7 @@ a:hover img {
   }
 }
 
-@keyframes bgextendAnimeSecond {
+@keyframes bg-appear-anime {
   0% {
     opacity: 0;
   }
@@ -565,10 +534,13 @@ a:hover img {
     opacity: 1;
   }
 }
-/*左から右*/
-.bgLRextend::before {
-  -webkit-animation-name: bgLRextendAnime;
-          animation-name: bgLRextendAnime;
+.u-bg-lr-extend-trigger {
+  opacity: 0;
+}
+
+.u-bg-lr-extend::before {
+  -webkit-animation-name: bg-lr-extend-anime;
+          animation-name: bg-lr-extend-anime;
   -webkit-animation-duration: 1s;
           animation-duration: 1s;
   -webkit-animation-fill-mode: forwards;
@@ -579,11 +551,10 @@ a:hover img {
   position: absolute;
   width: 100%;
   height: 100%;
-  background-color: black;
-  /*伸びる背景色の設定*/
+  background-color: #000;
 }
 
-@-webkit-keyframes bgLRextendAnime {
+@-webkit-keyframes bg-lr-extend-anime {
   0% {
     transform-origin: left;
     transform: scaleX(0);
@@ -601,7 +572,7 @@ a:hover img {
   }
 }
 
-@keyframes bgLRextendAnime {
+@keyframes bg-lr-extend-anime {
   0% {
     transform-origin: left;
     transform: scaleX(0);
@@ -618,12 +589,6 @@ a:hover img {
     transform: scaleX(0);
   }
 }
-/* スクロールをしたら出現する要素にはじめに透過0を指定　*/
-.bgappearTrigger,
-.bgLRextendTrigger {
-  opacity: 0;
-}
-
 /*--------------------------------------*
  * foundation
  *--------------------------------------*/

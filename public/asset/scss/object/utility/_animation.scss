@@ -1,17 +1,15 @@
 @use "./../../foundation/variable" as *;
 
-// アニメーション
-.u-animation {
+// フェードアップのアニメーション
+.u-fade-up-trigger {
   opacity: 0;
 }
 
 .u-fade-up {
-  &__active {
-    animation-name: fade-up-anime;
-    animation-duration: 0.5s;
-    animation-fill-mode: forwards;
-    opacity: 0;
-  }
+  animation-name: fade-up-anime;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  opacity: 0;
 }
 
 @keyframes fade-up-anime{
@@ -26,13 +24,16 @@
   }
 }
 
+// フェードレフトのアニメーション
+.u-fade-left-trigger {
+  opacity: 0;
+}
+
 .u-fade-left {
-  &__active {
-    animation-name: fade-left-anime;
-    animation-duration: 0.5s;
-    animation-fill-mode: forwards;
-    opacity: 0;
-  }
+  animation-name: fade-left-anime;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  opacity: 0;
 }
 
 @keyframes fade-left-anime{
@@ -47,13 +48,16 @@
   }
 }
 
+// フェードライトのアニメーション
+.u-fade-right-trigger {
+  opacity: 0;
+}
+
 .u-fade-right {
-  &__active {
-    animation-name: fade-right-anime;
-    animation-duration: 0.5s;
-    animation-fill-mode: forwards;
-    opacity: 0;
-  }
+  animation-name: fade-right-anime;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  opacity: 0;
 }
 
 @keyframes fade-right-anime{
@@ -68,102 +72,76 @@
   }
 }
 
-// フェードイン
-.u-fade-in {
-  opacity: 0;
-
-  &.up {
-    transform: translateY(100px);
+// ディレイ
+@include breakpoint(pc) {
+  .u-delay-02 {
+    animation-delay: .2s;
   }
-
-  &.left {
-    transform: translateX(-100px);
-  }
-  &.right {
-    transform: translateX(100px);
-  }
-
-  &__active {
-    animation-name: fade-in-anime;
-    animation-duration: 0.5s;
-    animation-fill-mode: forwards;
-    opacity: 0;
-	}
+  
+  .u-delay-04 {
+    animation-delay: .4s;
+  }  
 }
 
-@keyframes fade-in-anime{
-  from {
-    opacity: 0;
-  }
-
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-.u-delay-02 {
-  animation-delay: .2s;
-}
-
-.u-delay-04 {
-  animation-delay: .4s;
-}
-
-
-
-
-
-.bgextend{
-  animation-name:bgextendAnimeBase;
-  animation-duration:1s;
-  animation-fill-mode:forwards;
+// 背景スライド(ベース)
+.u-bg-extend {
+  animation-name: bg-extend-anime;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
   position: relative;
-  overflow: hidden;/*　はみ出た色要素を隠す　*/
+  overflow: hidden;
   opacity:0;
 }
 
-@keyframes bgextendAnimeBase{
+@keyframes bg-extend-anime {
   from {
     opacity:0;
   }
-
   to {
     opacity:1;  
-}
+  }
 }
 
-/*中の要素*/
-.bgappear{
-  animation-name:bgextendAnimeSecond;
-  animation-duration:1s;
+// 背景スライド(中身のアニメーション。遅れて表示)
+.u-bg-appear-trigger {
+  opacity: 0;
+}
+
+.u-bg-appear {
+  animation-name: bg-appear-anime;
+  animation-duration: 1s;
   animation-delay: 0.6s;
-  animation-fill-mode:forwards;
+  animation-fill-mode: forwards;
   opacity: 0;
 }
 
-@keyframes bgextendAnimeSecond{
+@keyframes bg-appear-anime {
   0% {
-  opacity: 0;
+    opacity: 0;
   }
   100% {
-  opacity: 1;
-}
+    opacity: 1;
+  }
 }
 
-/*左から右*/
-.bgLRextend::before{
-  animation-name:bgLRextendAnime;
-  animation-duration:1s;
-  animation-fill-mode:forwards;
-  animation-timing-function: cubic-bezier(0.98, -0.04, 0.32, 0.91);
-    content: "";
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background-color: black;/*伸びる背景色の設定*/
+// 背景スライド(左右にスライドするアニメーション)
+.u-bg-lr-extend-trigger {
+  opacity: 0;
 }
-@keyframes bgLRextendAnime{
+
+.u-bg-lr-extend::before {
+  animation-name: bg-lr-extend-anime;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  animation-timing-function: cubic-bezier(0.98, -0.04, 0.32, 0.91);
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: $color-black;
+}
+
+@keyframes bg-lr-extend-anime {
   0% {
     transform-origin:left;
     transform:scaleX(0);
@@ -181,10 +159,6 @@
   }
 }
 
-/* スクロールをしたら出現する要素にはじめに透過0を指定　*/
-.bgappearTrigger,
-.bgLRextendTrigger{
-    opacity: 0;
-}
+
 
 
