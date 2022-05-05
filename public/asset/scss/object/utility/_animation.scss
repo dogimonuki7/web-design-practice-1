@@ -1,5 +1,73 @@
 @use "./../../foundation/variable" as *;
 
+// アニメーション
+.u-animation {
+  opacity: 0;
+}
+
+.u-fade-up {
+  &__active {
+    animation-name: fade-up-anime;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+    opacity: 0;
+  }
+}
+
+@keyframes fade-up-anime{
+  from {
+    opacity: 0;
+    transform: translateY(100px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.u-fade-left {
+  &__active {
+    animation-name: fade-left-anime;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+    opacity: 0;
+  }
+}
+
+@keyframes fade-left-anime{
+  from {
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.u-fade-right {
+  &__active {
+    animation-name: fade-right-anime;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+    opacity: 0;
+  }
+}
+
+@keyframes fade-right-anime{
+  from {
+    opacity: 0;
+    transform: translateX(100px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 // フェードイン
 .u-fade-in {
   opacity: 0;

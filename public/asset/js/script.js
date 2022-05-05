@@ -1,18 +1,19 @@
-// フェードインアニメーション
-const fadeIns = document.querySelectorAll('.u-fade-in');
-const fadeIn = new IntersectionObserver(fadeAnime);
+const animations = document.querySelectorAll('.u-animation');
+const observer = new IntersectionObserver(callbackRouter);
+animations.forEach(observer.observe.bind(observer));
 
-fadeIns.forEach( e => {
-  fadeIn.observe( e );
-});
-
-function fadeAnime(entries){
+function callbackRouter(entries, observer) {
   entries.forEach(entry => {
     if (entry.isIntersecting) {
-      entry.target.classList.add('u-fade-in__active');
+      entry.target.classList.forEach(item => {
+        if (item === 'u-fade-up') entry.target.classList.add('u-fade-up__active');
+        if (item === 'u-fade-left') entry.target.classList.add('u-fade-left__active');
+        if (item === 'u-fade-right') entry.target.classList.add('u-fade-right__active');
+      });
     }
   });
-};
+}
+
 
 // テキスト背景アニメーション
 const bgLRextends = document.querySelectorAll('.bgLRextendTrigger');
