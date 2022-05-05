@@ -193,7 +193,7 @@ a:hover img {
   display: grid;
   row-gap: 32px;
 }
-@media (min-width: 640px) {
+@media (min-width: 768px) {
   .p-concept__list {
     display: grid;
     -moz-column-gap: 24px;
@@ -263,7 +263,7 @@ a:hover img {
   font-weight: 700;
   margin-bottom: 8px;
 }
-@media (min-width: 640px) {
+@media (min-width: 768px) {
   .p-point__item {
     display: flex;
     align-items: center;
@@ -461,7 +461,7 @@ a:hover img {
     transform: translateY(0);
   }
 }
-@media (min-width: 640px) {
+@media (min-width: 768px) {
   .u-delay-02 {
     -webkit-animation-delay: 0.2s;
             animation-delay: 0.2s;
