@@ -196,8 +196,8 @@ a:hover img {
 @media (min-width: 640px) {
   .p-concept__list {
     display: grid;
-    -moz-column-gap: 16px;
-         column-gap: 16px;
+    -moz-column-gap: 24px;
+         column-gap: 24px;
     grid-template-columns: repeat(3, 1fr);
   }
 }

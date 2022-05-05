@@ -16,7 +16,7 @@
   @include breakpoint(pc) {
     &__list {
       display: grid;
-      column-gap: 16px;
+      column-gap: 24px;
       grid-template-columns: repeat(3, 1fr);
     }
 	}
