@@ -1,6 +1,29 @@
 @use "./../../foundation/variable" as *;
 
 // フェードアップのアニメーション
+.u-fade-in-trigger {
+  opacity: 0;
+}
+
+.u-fade-in {
+  animation-name: fade-in-anime;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  animation-delay: .5s;
+  opacity: 0;
+}
+
+@keyframes fade-in-anime{
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+// フェードアップのアニメーション
 .u-fade-up-trigger {
   opacity: 0;
 }
@@ -83,7 +106,7 @@
   }  
 }
 
-// 背景スライド(ベース)
+// 背景スライド(はみ出している箇所を隠す用)
 .u-bg-extend {
   animation-name: bg-extend-anime;
   animation-duration: 1s;
@@ -102,7 +125,7 @@
   }
 }
 
-// 背景スライド(中身のアニメーション。遅れて表示)
+// 背景スライド(中身のアニメーション。スライドアニメーション後に中身を表示)
 .u-bg-appear-trigger {
   opacity: 0;
 }

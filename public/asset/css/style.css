@@ -356,6 +356,39 @@ a:hover img {
   }
 }
 
+.u-fade-in-trigger {
+  opacity: 0;
+}
+
+.u-fade-in {
+  -webkit-animation-name: fade-in-anime;
+          animation-name: fade-in-anime;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  -webkit-animation-delay: 0.5s;
+          animation-delay: 0.5s;
+  opacity: 0;
+}
+
+@-webkit-keyframes fade-in-anime {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fade-in-anime {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
 .u-fade-up-trigger {
   opacity: 0;
 }

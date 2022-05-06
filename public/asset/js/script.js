@@ -1,4 +1,17 @@
 // フェードアップ
+const fadeIns = document.querySelectorAll('.u-fade-in-trigger');
+const fadeIn = new IntersectionObserver(fadeInCallback);
+fadeIns.forEach(fadeIn.observe.bind(fadeIn));
+
+function fadeInCallback(entries){
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('u-fade-in');
+    }
+  });
+};
+
+// フェードアップ
 const fadeUps = document.querySelectorAll('.u-fade-up-trigger');
 const fadeUp = new IntersectionObserver(fadeUpCallback);
 fadeUps.forEach(fadeUp.observe.bind(fadeUp));
