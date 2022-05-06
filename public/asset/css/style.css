@@ -142,6 +142,7 @@ a:hover img {
   background-size: cover;
   background-position: 50%;
   background-repeat: no-repeat;
+  background-attachment: fixed;
   background-image: url(https://kobayashi555.netlify.app/asset/img/night-sky.webp);
 }
 .p-fv__text-bg-color {
