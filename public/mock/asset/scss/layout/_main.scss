@@ -1,0 +1,44 @@
+@use "./../foundation/variable" as *;
+
+.l-main {
+
+  h1 {
+    font-feature-settings: "palt";
+    font-size: 1.75rem;
+    line-height: calc(0.25rem * 12);
+    margin-bottom: 1.5rem;
+  }
+
+  h2 {
+    font-feature-settings: "palt";
+    font-size: 1.5rem;
+    line-height: calc(0.25rem * 10);
+    margin-bottom: 1rem;
+  }
+  
+  h3 {
+    font-feature-settings: "palt";
+    font-size: 1.3125rem;
+    line-height: calc(0.25rem * 9);
+    margin-bottom: 0.5rem;
+  }
+  
+  h4 {
+    font-feature-settings: "palt";
+    font-size: 1.125rem;
+    line-height: calc(0.25rem * 8);
+  }
+
+  & * + h2 {
+    margin-top: calc(0.25rem * 10);
+  }
+
+  & * + h3 {
+    margin-top: calc(0.25rem * 9);
+  }
+  
+  & * + h4 {
+    margin-top: calc(0.25rem * 8);
+  }
+    
+}

@@ -1,0 +1,46 @@
+// color
+// ----
+$color-primary: #0c64bc;
+$color-primary-dark: #06325e;
+$color-primary-light: #498bcd;
+$color-primary-light-100: #e7f0f8;
+$color-primary-light-200: #cee0f2;
+$color-border: #acb5be;
+$color-white: #fff;
+$color-black: #000;
+$color-red: #d40e22;
+$color-red-light: #c93d4b;
+$color-red-light-100: #fbe7e9;
+$color-yellow: #f5c416;
+$color-gray-100: #f4f5f6;
+$color-gray-200: #ebedef;
+$color-gray-300: #dde0e4;
+$color-text-100: #1f2b37;
+$color-text-200: #525960;
+$color-text-300: #788087;
+$color-disabled: #ebedef;
+$color-link: #0c64bc;
+
+// shadow
+// ----
+$shadow-100: 0 -0.1px 1px 0 rgba(0, 0, 0, 0.12), 0 1px 2px 0 rgba(0, 0, 0, .12);
+$shadow-200: 0 -0.1px 1px 0 rgba(0, 0, 0, 0.12), 0 2px 4px 0 rgba(0, 0, 0, .12);
+
+// breakpoint
+// ----
+@mixin breakpoint($point) {
+  @if $point == tablet {
+    @media (min-width: 620px) {
+      @content;
+    }
+  }
+  @if $point == pc {
+    @media (min-width: 620px) {
+      @content;
+    }
+  }
+}
+@include breakpoint(tablet) {
+}
+@include breakpoint(pc) {
+}

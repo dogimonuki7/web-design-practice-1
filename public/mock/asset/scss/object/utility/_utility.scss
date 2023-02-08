@@ -1,0 +1,29 @@
+@use "./../../foundation/variable" as *;
+
+.u-inline-block {
+  display: inline-block;
+}
+
+
+.u-note {
+  margin-top: 0.5rem;
+  display: table;
+  padding: 0 1.5rem;
+  li {
+    font-weight: 400;
+    font-size: 0.875rem;
+    line-height: 1.5;
+    color: $color-text-200;
+    list-style-type: none;
+    margin-top: 0.25rem;
+  }
+}
+
+.u-note-head {
+  display: table-cell;
+  padding-right: 0.5rem;
+}
+
+.u-note-body {
+  display: table-cell;
+}

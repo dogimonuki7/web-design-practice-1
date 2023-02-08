@@ -1,0 +1,27 @@
+@use "./../foundation/variable" as *;
+
+.l-header {
+  background-color: $color-white;
+  border-bottom: 1px solid $color-border;
+
+  &__content {
+    max-width: 1000px;
+    margin: 0 auto;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 1.5rem;
+  }
+
+  @include breakpoint(pc) {
+    &__content {
+      justify-content: flex-start;
+    }
+  }
+
+  &__logo {
+    display: inline-block;
+    max-width: 150px;
+  }
+}

@@ -1,0 +1,32 @@
+@use "./../../foundation/variable" as *;
+
+.c-input {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: 0.5rem 0.75rem;
+  border: 1px solid $color-border;
+  border-radius: 6px;
+  color: $color-text-100;
+  font-size: 1rem;
+  line-height: 1.5;
+  background-image: none;
+  background-color: transparent;
+
+  &::placeholder {
+    color: $color-text-300;
+  }
+  &:focus {
+    outline: 2px solid $color-primary;
+    outline-offset: 2px;
+  }
+  &:disabled {
+    color: $color-text-300;
+    background: $color-disabled;
+    border: 1px solid $color-border;
+  }
+  &:invalid {
+    outline: 2px solid $color-red;
+    background-color: $color-red-light-100;
+  }
+}

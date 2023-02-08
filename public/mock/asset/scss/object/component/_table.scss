@@ -1,0 +1,18 @@
+@use "./../../foundation/variable" as *;
+
+.c-table {
+  border-collapse: collapse;
+  width:  100%;
+
+  td {
+    padding: 0.875rem 1rem;
+    border: solid 1px $color-border;
+    color: $color-text-100;
+    font-size: 1rem;
+    line-height: 1.5;
+
+    &:hover {
+      background-color: $color-gray-100;
+    }
+  }
+}

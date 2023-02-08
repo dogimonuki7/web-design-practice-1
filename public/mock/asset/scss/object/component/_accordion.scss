@@ -1,0 +1,93 @@
+@use "./../../foundation/variable" as *;
+
+.c-accordion {
+
+  &__details {
+    box-shadow: $shadow-100;
+    background-color: $color-white;
+    border: 1px solid $color-border;
+    border-radius: 10px;
+
+    & + .c-accordion__details {
+      margin-top: 1rem;
+    }
+  }
+
+  &__summary {
+    display: block;
+    &::-webkit-details-marker {
+      display: none;
+    }
+  }
+
+  &__summary_inner {
+    cursor: pointer;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    color: $color-text-100;
+    font-size: 1rem;
+    line-height: 1.5;
+    font-weight: 700;
+    border-radius: 10px;
+
+    &:hover {
+      background-color: $color-gray-100;
+    }
+  }
+
+  &__icon {
+    display: block;
+    position: relative;
+    width: 18px;
+    margin-left: 0.5rem;
+    flex-shrink: 0;
+    transform-origin: center 43%;
+    transition: transform 0.3s;
+
+    &::before {
+      content: "";
+      position: absolute;
+      display: block;
+      width: 11px;
+      height: 2px;
+      background-color: $color-text-200;
+      left: 0;
+      transform: rotate(45deg);
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      display: block;
+      width: 11px;
+      height: 2px;
+      background-color: $color-text-200;
+      right: 0;
+      transform: rotate(-45deg);
+    }
+  }
+  
+  details[open] &__icon {
+    transform: rotate(-180deg);
+  }
+  
+  details[open] &__summary_inner {
+    border-bottom: 1px solid $color-border;
+    border-radius: 10px 10px 0 0;
+  }
+
+  &__content {
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  &__scroll {
+    max-height: 420px;
+    overflow: scroll;
+  }
+}

@@ -1,0 +1,26 @@
+@use "./../../foundation/variable" as *;
+
+.u-color-text-100 {
+  color: $color-text-100;
+  fill: $color-text-100;
+}
+
+.u-color-text-200 {
+  color: $color-text-200;
+  fill: $color-text-200;
+}
+
+.u-color-primary {
+  color: $color-primary;
+  fill: $color-primary;
+}
+
+.u-color-danger {
+  color: $color-red;
+  fill: $color-red;
+}
+
+.u-color-warning {
+  color: $color-yellow;
+  fill: $color-yellow;
+}

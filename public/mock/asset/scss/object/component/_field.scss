@@ -1,0 +1,63 @@
+@use "./../../foundation/variable" as *;
+
+.c-field {
+  margin-bottom: 1.5rem;
+  border: 0;
+
+  &__label {
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+    color: $color-text-100;
+    font-size: 0.875rem;
+    line-height: 1.5;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+  }
+
+  &__hint {
+    color: $color-text-200;
+    font-size: 0.875rem;
+    line-height: 1.5;
+    margin-top: 0.25rem;
+    margin-left: 0.25rem;
+  }
+
+  &__error {
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+    color: $color-red;
+    font-size: 0.875rem;
+    line-height: 1.5;
+    margin-top: 0.25rem;
+    margin-left: 0.25rem;
+    
+    &::before {
+      content: '';
+      min-width: 21px;
+      min-height: 21px;
+      background-image: url('data:image/svg+xml;charset=utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20height%3D%2221px%22%20viewBox%3D%220%200%2024%2024%22%20width%3D%2221px%22%20fill%3D%22%23d40e22%22%3E%3Cpath%20d%3D%22M4.47%2021h15.06c1.54%200%202.5-1.67%201.73-3L13.73%204.99c-.77-1.33-2.69-1.33-3.46%200L2.74%2018c-.77%201.33.19%203%201.73%203zM12%2014c-.55%200-1-.45-1-1v-2c0-.55.45-1%201-1s1%20.45%201%201v2c0%20.55-.45%201-1%201zm1%204h-2v-2h2v2z%22%2F%3E%3C%2Fsvg%3E');
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+  }
+
+  &__legend {
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+    color: $color-text-100;
+    font-size: 0.875rem;
+    line-height: 1.5;
+    font-weight: 700;
+  }
+
+  legend{
+    margin-bottom: 0.5rem;
+  }
+
+  legend + input {
+    -webkit-margin-top-collapse : separate;
+  }
+}

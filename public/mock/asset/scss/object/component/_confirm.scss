@@ -1,0 +1,24 @@
+@use "./../../foundation/variable" as *;
+
+.c-confirm {
+  border-bottom: 1px solid $color-border;
+
+  & + .c-confirm {
+    margin-top: 1rem;
+  }
+
+  &__label {
+    color: $color-text-200;
+    font-size: 0.875rem;
+    line-height: 1.5;
+    margin-bottom: 0.25rem;
+  }
+
+  &__value {
+    color: $color-text-100;
+    font-size: 1rem;
+    font-weight: 700;
+    line-height: 1.5;
+    margin-bottom: 0.5rem;
+  }
+}

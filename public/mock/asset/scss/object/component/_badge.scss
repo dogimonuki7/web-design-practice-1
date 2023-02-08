@@ -1,0 +1,38 @@
+@use "./../../foundation/variable" as *;
+
+.c-badge {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.25rem 0.5rem;
+  border-radius: 10px;
+  font-size: 0.8125rem;
+  line-height: 1;
+  font-weight: 700;
+
+  &__primay {
+    color: $color-white;
+    background: $color-primary;
+  }
+
+  &__primay-light {
+    color: $color-white;
+    background: $color-primary-light;
+  }
+
+  &__red {
+    color: $color-white;
+    background: $color-red;
+  }
+
+  &__red-light {
+    color: $color-white;
+    background: $color-red-light;
+  }
+
+  &__gray {
+    color: $color-text-100;
+    background: $color-gray-300;
+  }
+
+}

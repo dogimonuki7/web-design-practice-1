@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="asset/css/reset.css" />
+  <link rel="stylesheet" href="asset/css/style.min.css" />
+</head>
+<body>
+  <header class="l-header">
+    <div class="l-header__content">
+      <p>ヘッダー</p>
+    </div>
+  </header>
+  <main class="l-main">
+    <div class="c-container">
+      <h1 class="u-ml5 u-mr5">見出し（H1）</h1>
+      <ul class="c-stepper">
+        <li class="c-stepper__done">
+          <div class="c-stepper__item">
+            あああ<br />
+            情報
+          </div>
+        </li>
+        <li class="c-stepper__done">
+          <div class="c-stepper__item">
+            いいい<br />
+            情報
+          </div>
+        </li>
+        <li class="c-stepper__ready">
+          <div class="c-stepper__item">
+            ううう<br />
+            情報
+          </div>
+        </li>
+        <li class="c-stepper__ready">
+          <div class="c-stepper__item">
+            えええ<br/>
+            確認
+          </div>
+        </li>
+      </ul>
+
+      <div class="c-card">
+        <h2>見出し（H2）</h2>
+        <h3>Button</h3>
+        <div class="u-mb4" style="display: flex; gap: 16px;">
+          <button class="c-btn-primary">Primary</button>
+          <button class="c-btn-primary" disabled>Primary(disabled)</button>
+        </div>
+        <div class="u-mb4" style="display: flex; gap: 16px;">
+          <button class="c-btn-secondary">Secondary</button>
+          <button class="c-btn-secondary" disabled>Secondary(disabled)</button>
+        </div>
+        <div class="u-mb4" style="display: flex; gap: 16px;">
+          <button class="c-btn-text">Text</button>
+          <button class="c-btn-text" disabled>Text(disabled)</button>
+        </div>
+        <div class="u-mb4">
+          <button type="submit" class="c-btn-primary c-btn-block u-mb4">
+            Submit
+            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" aria-hidden="true"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M9.29 6.71c-.39.39-.39 1.02 0 1.41L13.17 12l-3.88 3.88c-.39.39-.39 1.02 0 1.41.39.39 1.02.39 1.41 0l4.59-4.59c.39-.39.39-1.02 0-1.41L10.7 6.7c-.38-.38-1.02-.38-1.41.01z"/></svg>
+          </button>
+        </div>
+        <div class="u-mb4">
+          <button type="submit" class="c-btn-primary c-btn-block" disabled>
+            Submit(disabled)
+            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" aria-hidden="true"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M9.29 6.71c-.39.39-.39 1.02 0 1.41L13.17 12l-3.88 3.88c-.39.39-.39 1.02 0 1.41.39.39 1.02.39 1.41 0l4.59-4.59c.39-.39.39-1.02 0-1.41L10.7 6.7c-.38-.38-1.02-.38-1.41.01z"/></svg>
+          </button>
+        </div>
+        <a href="">リンク</a>
+
+        <h3>Input</h3>
+        <div class="c-field">
+          <label for="input01" class="c-field__label">
+            ラベル
+            <span class="c-badge c-badge__red-light">
+              必須
+            </span>
+          </label>
+          <input id="input01" type="text" class="c-input" placeholder="プレースホルダー" aria-describedby="input01-hint">
+          <p id="input01-hint" class="c-field__hint">ヒントテキスト</p>
+        </div>
+        <div class="c-field">
+          <label for="input02" class="c-field__label">
+            ラベル
+            <span class="c-badge c-badge__gray">
+              任意
+            </span>
+          </label>
+          <input id="input02" type="text" class="c-input" placeholder="プレースホルダー" aria-describedby="input02-hint" disabled>
+          <p id="input02-hint" class="c-field__hint">ヒントテキスト</p>
+        </div>
+        <div class="c-field">
+          <label for="input03" class="c-field__label">
+            ラベル
+            <span class="c-badge c-badge__red-light">
+              必須
+            </span>
+          </label>
+          <input id="input03" type="text" class="c-input" placeholder="プレースホルダー" aria-describedby="input03-hint" required>
+          <p id="input03-hint" class="c-field__error">
+            エラーテキスト
+          </p>
+        </div>
+
+        <fieldset class="c-field">
+          <legend>
+            <p class="c-field__legend">
+              氏名
+              <span class="c-badge c-badge__red-light">
+                必須
+              </span>
+            </p>
+          </legend>
+          <div class="u-flex u-g2">
+            <div class="u-width-full">
+              <input id="input04" type="text" class="c-input" placeholder="姓" aria-describedby="input04-hint">
+              <p id="input04-hint" class="c-field__hint">例：福岡</p>    
+            </div>
+            <div class="u-width-full">
+              <input id="input04" type="text" class="c-input" placeholder="名" aria-describedby="input04-hint">
+              <p id="input04-hint" class="c-field__hint">例：太郎</p>    
+            </div>
+          </div>
+        </fieldset>
+
+        <h3>Select</h3>
+        <div class="c-field">
+          <label for="select01" class="c-field__label">
+            ラベル
+            <span class="c-badge c-badge__red-light">
+              必須
+            </span>
+          </label>
+          <select id="select01" class="c-select" aria-describedby="select01-hint">
+            <option value="">-- 選択してください --</option>
+            <option value="dog">イヌ</option>
+            <option value="cat">ネコ</option>
+          </select>
+          <p id="select01-hint" class="c-field__hint">ヒントテキスト</p>
+        </div>
+        <div class="c-field">
+          <label for="select02" class="c-field__label">
+            ラベル
+            <span class="c-badge c-badge__red-light">
+              必須
+            </span>
+          </label>
+          <select id="select02" class="c-select" aria-describedby="select02-hint" disabled>
+            <option value="">-- 選択してください --</option>
+            <option value="dog">イヌ</option>
+            <option value="cat">ネコ</option>
+          </select>
+          <p id="select02-hint" class="c-field__hint">ヒントテキスト</p>
+        </div>
+        <div class="c-field">
+          <label for="select02" class="c-field__label">
+            ラベル
+            <span class="c-badge c-badge__red-light">
+              必須
+            </span>
+          </label>
+          <select id="select02" class="c-select" aria-describedby="select02-hint" required>
+            <option value="">-- 選択してください --</option>
+            <option value="dog">イヌ</option>
+            <option value="cat">ネコ</option>
+          </select>
+          <p id="select02-hint" class="c-field__error">エラーテキスト</p>
+        </div>
+
+        <h3>Radio Button</h3>
+        <fieldset class="c-field" aria-describedby="radio01-hint">
+          <legend>
+            <!-- Safari対応のためu-mb0を指定 -->
+            <p class="c-field__label u-mb0">
+              ラベル
+              <span class="c-badge c-badge__red-light">
+                必須
+              </span>
+            </p>
+          </legend>
+          <label class="c-radio">
+            <input name="radio01" type="radio" value="1" checked>
+            イヌ
+          </label>
+          <label class="c-radio">
+            <input name="radio01" type="radio" value="2">
+            ネコ
+          </label>
+          <p id="radio01-hint" class="c-field__hint">ヒントテキスト</p>
+        </fieldset>
+        <fieldset class="c-field" aria-describedby="radio02-hint">
+          <legend>
+            <p class="c-field__legend">
+              ラベル
+              <span class="c-badge c-badge__red-light">
+                必須
+              </span>
+            </p>
+          </legend>
+          <label class="c-radio">
+            <input name="radio02" type="radio" value="1" checked disabled>
+            イヌ
+          </label>
+          <label class="c-radio">
+            <input name="radio02" type="radio" value="2" disabled>
+            ネコ
+          </label>
+          <p id="radio02-hint" class="c-field__hint">ヒントテキスト</p>
+        </fieldset>
+
+        <h3>Accordion</h3>
+        <details class="c-accordion__details">
+          <summary class="c-accordion__summary">
+            <span class="c-accordion__summary_inner">
+              概要<span class="c-accordion__icon"></span>
+            </span>
+          </summary>
+          <div class="c-accordion__content">
+            折りたたまれている部分です。<br />
+            折りたたまれている部分です。<br />
+            折りたたまれている部分です。<br />
+            折りたたまれている部分です。<br />
+            折りたたまれている部分です。<br />
+            折りたたまれている部分です。<br />
+            折りたたまれている部分です。<br />
+            折りたたまれている部分です。<br />
+            折りたたまれている部分です。<br />
+            折りたたまれている部分です。<br />
+            折りたたまれている部分です。<br />
+          </div>
+        </details>
+        <details class="c-accordion__details">
+          <summary class="c-accordion__summary">
+            <span class="c-accordion__summary_inner">
+              概要（スクロールあり）<span class="c-accordion__icon"></span>
+            </span>
+          </summary>
+          <div class="c-accordion__content c-accordion__scroll">
+            折りたたまれている部分です。<br />
+            折りたたまれている部分です。<br />
+            折りたたまれている部分です。<br />
+            折りたたまれている部分です。<br />
+            折りたたまれている部分です。<br />
+            折りたたまれている部分です。<br />
+            折りたたまれている部分です。<br />
+            折りたたまれている部分です。<br />
+            折りたたまれている部分です。<br />
+            折りたたまれている部分です。<br />
+            折りたたまれている部分です。<br />
+            折りたたまれている部分です。<br />
+            折りたたまれている部分です。<br />
+            折りたたまれている部分です。<br />
+            折りたたまれている部分です。<br />
+            折りたたまれている部分です。<br />
+            折りたたまれている部分です。<br />
+            折りたたまれている部分です。<br />
+            折りたたまれている部分です。<br />
+            折りたたまれている部分です。<br />
+            折りたたまれている部分です。<br />
+          </div>
+        </details>
+
+        <h3>補足説明</h3>
+        <aside class="c-aside">
+          補足説明
+        </aside>
+
+        <h3>申込み内容確認表示</h3>
+        <div class="c-confirm">
+          <p class="c-confirm__label">
+            ラベル
+          </p>
+          <p class="c-confirm__value">
+            登録した値
+          </p>
+        </div>
+        <div class="c-confirm">
+          <p class="c-confirm__label">
+            ラベル
+          </p>
+          <p class="c-confirm__value">
+            登録した値
+          </p>
+        </div>
+
+        <h3>箇条書き</h3>
+        <ul class="c-list">
+          <li>
+            コンテンツコンテンツ
+          </li>
+          <li>
+            コンテンツコンテンツ
+          </li>
+        </ul>
+
+        <h3>Alert</h3>
+        <div class="c-alert">
+          <div>
+            <h4 class="u-color-danger">エラー</h4>
+            <p class="u-color-danger">エラー内容</p>  
+          </div>
+        </div>
+
+        <h3>Modal</h3>
+        <button id="js-modal-button" class="c-btn-secondary">モーダルを開く</button>
+      </div>
+    </div>
+  </main>
+  <footer class="l-footer">
+    <p>フッター</p>
+  </footer>
+
+  <!-- モーダル -->
+  <div id="js-modal" class="c-modal">
+    <div id="js-modal-overlay" class="c-modal__overlay"></div>
+    <div class="c-modal__dialog">
+      <div class="c-modal__title">
+        タイトル
+      </div>
+      <div class="c-modal__content">
+        <div class="u-flex u-align-center u-mb4">
+          <svg class="u-mr2 u-color-text-200" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" aria-hidden="true"><path d="M0 0h24v24H0z" fill="none"/><path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/></svg>
+          <input type="text" class="c-input" placeholder="XXXで検索">
+        </div>
+
+        <table class="c-table" id="js-modal-close">
+          <tbody>
+            <tr>
+              <td>
+                <div class="u-flex u-align-center u-justify-between">
+                  あああああ
+                  <svg class="u-color-text-200" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" aria-hidden="true"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M9.29 6.71c-.39.39-.39 1.02 0 1.41L13.17 12l-3.88 3.88c-.39.39-.39 1.02 0 1.41.39.39 1.02.39 1.41 0l4.59-4.59c.39-.39.39-1.02 0-1.41L10.7 6.7c-.38-.38-1.02-.38-1.41.01z"/></svg>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <div class="u-flex u-align-center u-justify-between">
+                  あああああ
+                  <svg class="u-color-text-200" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" aria-hidden="true"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M9.29 6.71c-.39.39-.39 1.02 0 1.41L13.17 12l-3.88 3.88c-.39.39-.39 1.02 0 1.41.39.39 1.02.39 1.41 0l4.59-4.59c.39-.39.39-1.02 0-1.41L10.7 6.7c-.38-.38-1.02-.38-1.41.01z"/></svg>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <div class="u-flex u-align-center u-justify-between">
+                  あああああ
+                  <svg class="u-color-text-200" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" aria-hidden="true"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M9.29 6.71c-.39.39-.39 1.02 0 1.41L13.17 12l-3.88 3.88c-.39.39-.39 1.02 0 1.41.39.39 1.02.39 1.41 0l4.59-4.59c.39-.39.39-1.02 0-1.41L10.7 6.7c-.38-.38-1.02-.38-1.41.01z"/></svg>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <div class="u-flex u-align-center u-justify-between">
+                  あああああ
+                  <svg class="u-color-text-200" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" aria-hidden="true"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M9.29 6.71c-.39.39-.39 1.02 0 1.41L13.17 12l-3.88 3.88c-.39.39-.39 1.02 0 1.41.39.39 1.02.39 1.41 0l4.59-4.59c.39-.39.39-1.02 0-1.41L10.7 6.7c-.38-.38-1.02-.38-1.41.01z"/></svg>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <div class="u-flex u-align-center u-justify-between">
+                  あああああ
+                  <svg class="u-color-text-200" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" aria-hidden="true"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M9.29 6.71c-.39.39-.39 1.02 0 1.41L13.17 12l-3.88 3.88c-.39.39-.39 1.02 0 1.41.39.39 1.02.39 1.41 0l4.59-4.59c.39-.39.39-1.02 0-1.41L10.7 6.7c-.38-.38-1.02-.38-1.41.01z"/></svg>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <div class="u-flex u-align-center u-justify-between">
+                  あああああ
+                  <svg class="u-color-text-200" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" aria-hidden="true"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M9.29 6.71c-.39.39-.39 1.02 0 1.41L13.17 12l-3.88 3.88c-.39.39-.39 1.02 0 1.41.39.39 1.02.39 1.41 0l4.59-4.59c.39-.39.39-1.02 0-1.41L10.7 6.7c-.38-.38-1.02-.38-1.41.01z"/></svg>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <div class="u-flex u-align-center u-justify-between">
+                  あああああ
+                  <svg class="u-color-text-200" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" aria-hidden="true"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M9.29 6.71c-.39.39-.39 1.02 0 1.41L13.17 12l-3.88 3.88c-.39.39-.39 1.02 0 1.41.39.39 1.02.39 1.41 0l4.59-4.59c.39-.39.39-1.02 0-1.41L10.7 6.7c-.38-.38-1.02-.38-1.41.01z"/></svg>
+                </div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <script src="./asset/js/script.js"></script>
+</body>
+</html>

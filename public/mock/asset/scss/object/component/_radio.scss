@@ -1,0 +1,33 @@
+@use "./../../foundation/variable" as *;
+
+.c-radio {
+  display: inline-block;
+  width: 100%;
+  padding: 0.5rem 0.75rem;
+  border: 1px solid $color-border;
+  border-radius: 6px;
+  cursor: pointer;
+
+  & + .c-radio {
+    margin-top: 0.5rem;
+  }
+
+  &:hover {
+    background: $color-gray-100;
+    transition: .3s;
+  }
+
+  &:has(input:checked) {
+    border: 1px solid $color-primary;
+    background-color: $color-primary-light-100;
+    box-shadow: 0 0 0 1px $color-primary;
+  }
+
+  &:has(input:disabled) {
+    color: $color-text-300;
+    background: $color-disabled;
+    border: 1px solid $color-border;
+    box-shadow: none;
+    pointer-events: none;
+  }
+}
