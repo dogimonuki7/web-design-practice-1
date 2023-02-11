@@ -1,0 +1,30 @@
+@use "./../../foundation/variable" as *;
+
+.p-privacy-policy {
+  p {
+    margin-top: 0.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  &__list {
+    display: table;
+    padding: 0 1rem;
+    margin-bottom: 1.5rem;
+    li {
+      list-style-type: none;
+    }
+
+    li + li {
+      margin-top: 0.5rem;
+    }
+  }
+
+  &__list-head {
+    display: table-cell;
+    padding-right: 0.5rem;
+  }
+
+  &__list-body {
+    display: table-cell;
+  }
+}

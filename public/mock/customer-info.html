@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="asset/css/reset.css" />
+  <link rel="stylesheet" href="asset/css/style.min.css" />
+</head>
+<body>
+  <header class="l-header">
+    <div class="l-header__content">
+      ヘッダー
+    </div>
+  </header>
+  <main class="l-main">
+    <div class="c-container">
+      <ul class="c-stepper">
+        <li class="c-stepper__done" aria-current="step">
+          <div class="c-stepper__item">
+            Step1
+          </div>
+        </li>
+        <li class="c-stepper__ready" aria-current="false">
+          <div class="c-stepper__item">
+            Step2
+          </div>
+        </li>
+        <li class="c-stepper__ready" aria-current="false">
+          <div class="c-stepper__item">
+            Step3
+          </div>
+        </li>
+        <li class="c-stepper__ready" aria-current="false">
+          <div class="c-stepper__item">
+            Step4
+          </div>
+        </li>
+      </ul>
+
+      <div class="c-card">
+        <h2>お客さま情報</h2>
+        <fieldset class="c-field">
+          <legend>
+            <p class="c-field__legend">
+              氏名
+              <span class="c-badge c-badge__red-light">
+                必須
+              </span>
+            </p>
+          </legend>
+          <div class="u-flex u-g2">
+            <div class="u-width-full">
+              <input id="last-name" type="text" class="c-input" placeholder="姓" autocomplete="family-name" aria-describedby="last-name-hint">
+              <p id="last-name-hint" class="c-field__hint">例：山田</p>
+            </div>
+            <div class="u-width-full">
+              <input id="first-name" type="text" class="c-input" placeholder="名" autocomplete="given-name" aria-describedby="first-name-hint">
+              <p id="first-name-hint" class="c-field__hint">例：太郎</p>    
+            </div>
+          </div>
+        </fieldset>
+        <fieldset class="c-field">
+          <legend>
+            <p class="c-field__legend">
+              氏名 (フリガナ)
+              <span class="c-badge c-badge__red-light">
+                必須
+              </span>
+            </p>
+          </legend>
+          <div class="u-flex u-g2">
+            <div class="u-width-full">
+              <input id="last-name-kana" type="text" class="c-input" placeholder="姓 (フリガナ)" aria-describedby="last-name-kana-hint">
+              <p id="last-name-hint" class="c-field__hint">例：ヤマダ</p>
+            </div>
+            <div class="u-width-full">
+              <input id="first-name-kana" type="text" class="c-input" placeholder="名 (フリガナ)" aria-describedby="first-name-kana-hint">
+              <p id="first-name-kana-hint" class="c-field__hint">例：タロウ</p>    
+            </div>
+          </div>
+        </fieldset>
+        <div class="c-field">
+          <label for="birthday" class="c-field__label">
+            生年月日
+            <span class="c-badge c-badge__red-light">
+              必須
+            </span>
+          </label>
+          <input id="birthday" type="text" class="c-input u-width-160" aria-describedby="birthday-hint">
+          <p id="birthday-hint" class="c-field__hint">例：19900110 (1990年1月10日生まれの場合)</p>
+        </div>
+        <fieldset class="c-field" aria-describedby="radio01-hint">
+          <legend>
+            <p class="c-field__legend">
+              性別
+              <span class="c-badge c-badge__red-light">
+                必須
+              </span>
+            </p>
+          </legend>
+          <div class="u-flex u-direction-column">
+            <label class="c-radio u-width-160">
+              <input name="gender" id="male" type="radio" value="male" checked>
+              男性
+            </label>
+            <label class="c-radio u-width-160">
+              <input name="gender" id="female" type="radio" value="female">
+              女性
+            </label>
+          </div>
+        </fieldset>
+        <div class="c-field">
+          <label for="postal-code" class="c-field__label">
+            郵便番号
+            <span class="c-badge c-badge__red-light">
+              必須
+            </span>
+          </label>
+          <input id="postal-code" type="text" autocomplete="postal-code" class="c-input u-width-160" aria-describedby="postal-code-hint">
+          <p id="postal-code-hint" class="c-field__hint">
+            例：1000000 (ハイフンなしで入力してください）
+          </p>
+        </div>
+        <div class="c-field">
+          <label for="address" class="c-field__label">
+            住所
+            <span class="c-badge c-badge__red-light">
+              必須
+            </span>
+          </label>
+          <input id="address" type="text" class="c-input" aria-describedby="address-hint">
+          <p id="address-hint" class="c-field__hint">
+            例：福岡県福岡市中央区天神１−１−１
+          </p>
+        </div>
+        <div class="c-field">
+          <label for="address-building" class="c-field__label">
+            建物名など
+            <span class="c-badge c-badge__gray">
+              任意
+            </span>
+          </label>
+          <input id="address-building" type="text" class="c-input" aria-describedby="address-building-hint">
+          <p id="address-building-hint" class="c-field__hint">
+            例：○○ビル１０１
+          </p>
+        </div>
+        <div class="c-field">
+          <label for="address-kana" class="c-field__label">
+            住所 (フリガナ)
+            <span class="c-badge c-badge__red-light">
+              必須
+            </span>
+          </label>
+          <input id="address-kana" type="text" class="c-input" aria-describedby="address-kana-hint">
+          <p id="address-kana-hint" class="c-field__hint">
+            例：フクオカケンフクオカシチュウオウクテンジン１−１−１
+          </p>
+        </div>
+        <div class="c-field">
+          <label for="address-building-kana" class="c-field__label">
+            建物名など (フリガナ)
+            <span class="c-badge c-badge__gray">
+              任意
+            </span>
+          </label>
+          <input id="address-building-kana" type="text" class="c-input" aria-describedby="address-building-kana-hint">
+          <p id="address-building-kana-hint" class="c-field__hint">
+            例：○○ビル１０１
+          </p>
+        </div>
+        <h2>ご連絡先</h2>
+        <div class="c-field">
+          <label for="mobile-tel-number" class="c-field__label">
+            携帯電話番号
+            <span class="c-badge c-badge__red-light">
+              必須
+            </span>
+          </label>
+          <input id="mobile-tel-number" type="tel" autocomplete="mobile tel-national" class="c-input" aria-describedby="mobile-tel-number-hint">
+          <p id="mobile-tel-number-hint" class="c-field__hint">
+            例：09010002000 (ハイフンなしで入力してください)
+          </p>
+        </div>
+        <div class="c-field">
+          <label for="home-tel-number" class="c-field__label">
+            自宅電話番号
+            <span class="c-badge c-badge__gray">
+              任意
+            </span>
+          </label>
+          <input id="home-tel-number" type="tel" autocomplete="home tel-national" class="c-input" aria-describedby="home-tel-number-hint">
+          <p id="home-tel-number-hint" class="c-field__hint">
+            例：0921002000 (ハイフンなしで入力してください)
+          </p>
+        </div>
+        <div class="c-field">
+          <label for="mail-address" class="c-field__label">
+            メールアドレス
+            <span class="c-badge c-badge__red-light">
+              必須
+            </span>
+          </label>
+          <input id="mail-address" type="email" autocomplete="email" class="c-input" aria-describedby="mail-address-hint">
+          <p id="mail-address-hint" class="c-field__hint">
+            例：example@mail.com
+          </p>
+        </div>
+      </div>
+      <div class="c-card">
+        <h2>お客さま情報</h2>
+        <details class="c-accordion__details">
+          <summary class="c-accordion__summary">
+            <span class="c-accordion__summary_inner">
+              個人情報の取扱いに関する同意書<span class="c-accordion__icon"></span>
+            </span>
+          </summary>
+          <div class="c-accordion__content c-accordion__scroll">
+            <div class="p-privacy-policy">
+              <h3 class="u-text-center">
+                ああああ
+              </h3>
+              <p>
+                いいいいい
+              </p>
+              <h4>
+                ううううう
+              </h4>
+              <p>
+                えええええ
+              </p>
+              <p>
+                おおおおお
+              </p>
+            </div>
+          </div>
+        </details>
+        <a class="c-btn-primary c-btn-block u-mt6" href="organization-info.html">
+          次へ
+          <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" aria-hidden="true"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M9.29 6.71c-.39.39-.39 1.02 0 1.41L13.17 12l-3.88 3.88c-.39.39-.39 1.02 0 1.41.39.39 1.02.39 1.41 0l4.59-4.59c.39-.39.39-1.02 0-1.41L10.7 6.7c-.38-.38-1.02-.38-1.41.01z"/></svg>
+        </a>
+      </div>
+    </div>
+  </main>
+  <footer class="l-footer">
+    <div class="l-footer__content">
+      フッター
+    </div>
+  </footer>
+
+  <script src="./asset/js/script.js"></script>
+</body>
+</html>

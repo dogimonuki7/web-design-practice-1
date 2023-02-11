@@ -4,6 +4,10 @@
   display: flex;
 }
 
+.u-inline-block {
+  display: inline-block;
+}
+
 .u-justify-start {
   justify-content: start;
 }
@@ -30,4 +34,12 @@
 
 .u-align-center {
   align-items: center;
+}
+
+.u-direction-row {
+  flex-direction: row;
+}
+
+.u-direction-column {
+  flex-direction: column;
 }

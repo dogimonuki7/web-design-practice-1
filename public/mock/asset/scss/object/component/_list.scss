@@ -4,7 +4,31 @@
   list-style-type: disc;
   padding-left: 1.5rem;
 
-  li {
-    margin-top: 0.25rem;
+  li + li {
+    margin-top: 0.5rem;
   }
 }
+
+// マーク変更用
+.c-list-mark {
+  display: table;
+  padding: 0 1rem;
+  margin-bottom: 1.5rem;
+  li {
+    list-style-type: none;
+  }
+
+  li + li {
+    margin-top: 0.5rem;
+  }
+
+  &__head {
+    display: table-cell;
+    padding-right: 0.5rem;
+  }
+  
+  &__body {
+    display: table-cell;
+  }
+}
+

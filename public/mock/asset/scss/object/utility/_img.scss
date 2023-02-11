@@ -1,0 +1,9 @@
+@use "./../../foundation/variable" as *;
+
+.u-img-border {
+  max-width: 100%;
+  height: auto;
+  border: 1px solid $color-border;
+  border-radius: 0.5rem;
+  display: block;
+}

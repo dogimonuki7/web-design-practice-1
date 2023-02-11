@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="asset/css/reset.css" />
+  <link rel="stylesheet" href="asset/css/style.min.css" />
+</head>
+<body>
+  <header class="l-header">
+    <div class="l-header__content">
+      ヘッダー
+    </div>
+  </header>
+  <main class="l-main">
+    <div class="c-container">
+
+      <div class="c-card">
+        <h2>ご連絡先</h2>
+        <div class="c-field">
+          <label for="mobile-tel-number" class="c-field__label">
+            携帯電話番号
+            <span class="c-badge c-badge__red-light">
+              必須
+            </span>
+          </label>
+          <input id="mobile-tel-number" type="tel" autocomplete="mobile tel-national" class="c-input" aria-describedby="mobile-tel-number-hint">
+          <p id="mobile-tel-number-hint" class="c-field__hint">
+            例：09010002000 (ハイフンなしで入力してください)
+          </p>
+        </div>
+        <div class="c-field">
+          <label for="home-tel-number" class="c-field__label">
+            自宅電話番号
+            <span class="c-badge c-badge__gray">
+              任意
+            </span>
+          </label>
+          <input id="home-tel-number" type="tel" autocomplete="home tel-national" class="c-input" aria-describedby="home-tel-number-hint">
+          <p id="home-tel-number-hint" class="c-field__hint">
+            例：0921002000 (ハイフンなしで入力してください)
+          </p>
+        </div>
+        <div class="c-field">
+          <label for="mail-address" class="c-field__label">
+            メールアドレス
+            <span class="c-badge c-badge__red-light">
+              必須
+            </span>
+          </label>
+          <input id="mail-address" type="email" autocomplete="email" class="c-input" aria-describedby="mail-address-hint">
+          <p id="mail-address-hint" class="c-field__hint">
+            例：example@mail.com
+          </p>
+        </div>
+        <a class="c-btn-primary c-btn-block u-mt7" href="apply-confirm.html">
+          修正する
+        </a>
+      </div>
+    </div>
+  </main>
+  <footer class="l-footer">
+    <div class="l-footer__content">
+      フッター
+    </div>
+  </footer>
+
+  <script src="./asset/js/script.js"></script>
+</body>
+</html>

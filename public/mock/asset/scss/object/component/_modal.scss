@@ -19,10 +19,10 @@
     transition: .3s;
   }
 
-  &__dialog {
+  &__body {
     width: calc(100vw - 2rem);
     max-width: 524px;
-    max-height: calc(100% - 13rem);
+    max-height: calc(100% - 21rem);
     background-color: $color-white;
     box-shadow: $shadow-200;
     position: absolute;
@@ -30,18 +30,27 @@
     left: 50%;
     transform: translate(-50%, -50%);
     border-radius: 12px;
-    overflow: scroll;
+    overflow: auto;
+    display: flex;
+    flex-direction: column;
   }
 
-  &__title {
+  &__header {
+    width: 100%;
     padding: 1rem 1.5rem;
     font-size: 1rem;
     line-height: 1.5;
     font-weight: 700;
     border-bottom: 1px solid $color-border;
+    position: fixed;
   }
 
   &__content {
     padding: 1.5rem;
+    overflow-y: auto;
+  }
+
+  &__header + &__content {
+    margin-top: 57px;      
   }
 }

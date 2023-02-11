@@ -34,7 +34,7 @@
     border-radius: 10px;
 
     &:hover {
-      background-color: $color-gray-100;
+      background-color: $color-gray-200;
     }
   }
 
@@ -83,11 +83,10 @@
     padding: 1.5rem;
     display: flex;
     flex-direction: column;
-    gap: 16px;
   }
 
   &__scroll {
-    max-height: 420px;
-    overflow: scroll;
+    max-height: 320px;
+    overflow: auto;
   }
 }

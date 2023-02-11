@@ -2,39 +2,31 @@
 
 .c-select {
   width: 100%;
-  padding: 0.5rem 0.75rem;
+  padding: 0.625rem 2rem 0.625rem 0.75rem;
   border: 1px solid $color-border;
   border-radius: 6px;
   color: $color-text-100;
   font-size: 1rem;
   line-height: 1.5;
   appearance: none;
-  background-image: url('../img/arrow_drop_down.svg');
+  background-color: $color-white;
+  background-image: url('data:image/svg+xml;charset=utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20height%3D%2224px%22%20viewBox%3D%220%200%2024%2024%22%20width%3D%2224px%22%20fill%3D%22%23525960%22%3E%3Cpath%20d%3D%22M0%200h24v24H0V0z%22%20fill%3D%22none%22%2F%3E%3Cpath%20d%3D%22M8.71%2011.71l2.59%202.59c.39.39%201.02.39%201.41%200l2.59-2.59c.63-.63.18-1.71-.71-1.71H9.41c-.89%200-1.33%201.08-.7%201.71z%22%2F%3E%3C%2Fsvg%3E');
   background-repeat: no-repeat;
   background-position: right 8px top 50%;
   background-size: 24px 24px;
 
   &:focus {
-    outline: 2px solid $color-primary;
-    outline-offset: 2px;
+    outline: none;
+    box-shadow: 0 0 0 4px $color-primary-light-200;
   }
   &:disabled {
     color: $color-text-300;
-    background: $color-disabled;
+    background-color: $color-disabled;
     border: 1px solid $color-border;
-    appearance: none;
-    background-image: url('../img/arrow_drop_down.svg');
-    background-repeat: no-repeat;
-    background-position: right 8px top 50%;
-    background-size: 24px 24px;
   }
   &:invalid {
-    outline: 2px solid $color-red;
     background-color: $color-red-light-100;
-    appearance: none;
-    background-image: url('../img/arrow_drop_down.svg');
-    background-repeat: no-repeat;
-    background-position: right 8px top 50%;
-    background-size: 24px 24px;
+    outline: none;
+    box-shadow: 0 0 0 2px $color-red;
   }
 }

@@ -7,7 +7,8 @@ $color-primary-light-100: #e7f0f8;
 $color-primary-light-200: #cee0f2;
 $color-border: #acb5be;
 $color-white: #fff;
-$color-black: #000;
+$color-black: #2c2c2c;
+$color-black-light: #444;
 $color-red: #d40e22;
 $color-red-light: #c93d4b;
 $color-red-light-100: #fbe7e9;
@@ -29,18 +30,11 @@ $shadow-200: 0 -0.1px 1px 0 rgba(0, 0, 0, 0.12), 0 2px 4px 0 rgba(0, 0, 0, .12);
 // breakpoint
 // ----
 @mixin breakpoint($point) {
-  @if $point == tablet {
-    @media (min-width: 620px) {
-      @content;
-    }
-  }
   @if $point == pc {
     @media (min-width: 620px) {
       @content;
     }
   }
-}
-@include breakpoint(tablet) {
 }
 @include breakpoint(pc) {
 }

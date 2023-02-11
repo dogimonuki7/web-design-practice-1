@@ -30,10 +30,12 @@
 @use "./object/component/table";
 
 /* project */
+@use "./object/project/privacy-policy";
 
 /* utility */
 @use "./object/utility/color";
 @use "./object/utility/flex";
+@use "./object/utility/img";
 @use "./object/utility/text";
 @use "./object/utility/space";
 @use "./object/utility/width";

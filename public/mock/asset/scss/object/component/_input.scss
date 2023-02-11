@@ -4,21 +4,20 @@
   display: flex;
   align-items: center;
   width: 100%;
-  padding: 0.5rem 0.75rem;
+  padding: 0.625rem 0.75rem;
   border: 1px solid $color-border;
   border-radius: 6px;
   color: $color-text-100;
   font-size: 1rem;
   line-height: 1.5;
-  background-image: none;
-  background-color: transparent;
+  background: $color-white;
 
   &::placeholder {
     color: $color-text-300;
   }
   &:focus {
-    outline: 2px solid $color-primary;
-    outline-offset: 2px;
+    outline: none;
+    box-shadow: 0 0 0 4px $color-primary-light-200;
   }
   &:disabled {
     color: $color-text-300;
@@ -26,7 +25,16 @@
     border: 1px solid $color-border;
   }
   &:invalid {
-    outline: 2px solid $color-red;
-    background-color: $color-red-light-100;
+    background: $color-red-light-100;
+    outline: none;
+    box-shadow: 0 0 0 2px $color-red;
+  }
+  &__search {
+    padding-left: 2.5rem;
+    appearance: none;
+    background-image: url('data:image/svg+xml;charset=utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20height%3D%2224px%22%20viewBox%3D%220%200%2024%2024%22%20width%3D%2224px%22%20fill%3D%22%23788087%22%3E%3Cpath%20d%3D%22M0%200h24v24H0z%22%20fill%3D%22none%22%2F%3E%3Cpath%20d%3D%22M15.5%2014h-.79l-.28-.27C15.41%2012.59%2016%2011.11%2016%209.5%2016%205.91%2013.09%203%209.5%203S3%205.91%203%209.5%205.91%2016%209.5%2016c1.61%200%203.09-.59%204.23-1.57l.27.28v.79l5%204.99L20.49%2019l-4.99-5zm-6%200C7.01%2014%205%2011.99%205%209.5S7.01%205%209.5%205%2014%207.01%2014%209.5%2011.99%2014%209.5%2014z%22%2F%3E%3C%2Fsvg%3E');
+    background-repeat: no-repeat;
+    background-position: left 8px top 50%;
+    background-size: 24px 24px;
   }
 }

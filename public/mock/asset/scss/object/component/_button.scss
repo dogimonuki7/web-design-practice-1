@@ -5,7 +5,7 @@
   justify-content: center;
   align-items: center;
   gap: 0.25rem;
-  padding: 0.5rem 1rem;
+  padding: 0.625rem 1rem;
   color: $color-white;
   background: $color-primary;
   border: 1px solid $color-primary;
@@ -14,7 +14,6 @@
   line-height: 1.5;
   font-weight: 700;
   text-decoration: none;
-  min-width: 100px;
   cursor: pointer;
 
   svg {
@@ -46,7 +45,7 @@
   justify-content: center;
   align-items: center;
   gap: 0.25rem;
-  padding: 0.5rem 1rem;
+  padding: 0.625rem 1rem;
   color: $color-primary;
   background: transparent;
   border: 1px solid $color-border;
@@ -55,7 +54,6 @@
   line-height: 1.5;
   font-weight: 700;
   text-decoration: none;
-  min-width: 100px;
   cursor: pointer;
 
   svg {
@@ -86,7 +84,7 @@
   justify-content: center;
   align-items: center;
   gap: 0.25rem;
-  padding: 0.5rem 1rem;
+  padding: 0.625rem 1rem;
   color: $color-primary;
   background: $color-primary-light-100;
   border: 1px solid $color-primary-light-100;
@@ -95,7 +93,6 @@
   line-height: 1.5;
   font-weight: 700;
   text-decoration: none;
-  min-width: 100px;
   cursor: pointer;
 
   svg {
@@ -121,9 +118,88 @@
   }
 }
 
+.c-btn-black {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.25rem;
+  padding: 0.625rem 1rem;
+  color: $color-white;
+  background: $color-black;
+  border: 1px solid $color-black;
+  border-radius: 10px;
+  font-size: 1rem;
+  line-height: 1.5;
+  font-weight: 700;
+  text-decoration: none;
+  cursor: pointer;
+
+  svg {
+    fill: $color-white;
+  }
+
+  &:hover {
+    background: $color-black-light;
+    border: 1px solid $color-black-light;
+    transition: .3s;
+  }
+  &:focus {
+    outline: none;
+    box-shadow: 0 0 0 4px $color-primary-light-200;
+  }
+  &:disabled {
+    color: $color-text-300;
+    background: $color-gray-200;
+    border: 1px solid $color-gray-200;
+    pointer-events: none;
+    svg {
+      fill: $color-text-300;
+    } 
+  }
+}
+
 .c-btn-block {
   display: flex;
   justify-content: center;
   align-items: center;
   width: 100%;
+}
+
+
+.c-btn-icon {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.125rem;
+  padding: 0.5rem;
+  color: $color-text-200;
+  background: transparent;
+  border: transparent;
+  border-radius: 10px;
+  font-size: 0.625rem;
+  line-height: 1;
+  font-weight: 700;
+  text-decoration: none;
+  cursor: pointer;
+
+  svg {
+    fill: $color-text-200;
+  }
+
+  &:hover {
+    background: $color-gray-100;
+    transition: .3s;
+  }
+  &:focus {
+    outline: none;
+    box-shadow: 0 0 0 4px $color-primary-light-200;
+  }
+  &:disabled {
+    color: $color-text-300;
+    background: $color-gray-200;
+    pointer-events: none;
+    svg {
+      fill: $color-text-300;
+    } 
+  }
 }

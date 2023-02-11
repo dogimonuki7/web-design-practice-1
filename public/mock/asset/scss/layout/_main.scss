@@ -27,18 +27,23 @@
     font-feature-settings: "palt";
     font-size: 1.125rem;
     line-height: calc(0.25rem * 8);
+    margin-bottom: 0.25rem;
   }
 
   & * + h2 {
-    margin-top: calc(0.25rem * 10);
+    margin-top: 2.5rem;
   }
 
   & * + h3 {
-    margin-top: calc(0.25rem * 9);
+    margin-top: 2.5rem;
   }
   
   & * + h4 {
-    margin-top: calc(0.25rem * 8);
+    margin-top: 1.5rem;
   }
-    
+
+  hr {
+    border: 1px solid $color-border;
+    margin: 1.5rem 0;
+  }
 }
