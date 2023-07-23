@@ -26,7 +26,7 @@
 
   function updateTimer() {
     const timerElement = document.getElementById('timer');
-    const seconds = (timeCnt / 1000).toFixed(1);
+    const seconds = (timeCnt / 1000).toFixed(2);
     timerElement.textContent = seconds;
 
     if (timeCnt <= 5000) {
@@ -42,14 +42,14 @@
 
   function startTimer() {
     timerInterval = setInterval(function() {
-      timeCnt += 100; // 100ミリ秒加算
+      timeCnt += 10; // 100ミリ秒加算
       if (timeCnt >= maxTimer) {
         clearInterval(timerInterval); // タイマー停止
         document.getElementById('timer').textContent = '10秒を超えたよ'; // タイマー表示を0にする
       } else {
         updateTimer(); // タイマーを更新
       }
-    }, 100); // 100ミリ秒ごとに更新
+    }, 10); // 100ミリ秒ごとに更新
   }
 
   function stopTimer() {
@@ -113,6 +113,8 @@
 
         //button クリック
         this.$questionButton.on("click", function () {
+
+          stopTimer();
 
           let ans = 0;
           if ($(this).hasClass('button01')) {
