@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>いくつくといくつ</title>
+  <link rel="stylesheet" href="asset/css/reset.css" />
+  <link rel="stylesheet" href="asset/css/style.min.css" />
+</head>
+<body>
+<main class="quiz">
+  <div class="container">
+
+    <div class="quiz-content">
+
+      <div class="finish">
+        <div class="score-wrap">
+          <span class="score">0</span>
+          <span class="ja">点</span>
+          <span class="full">／100点</span>
+        </div>
+        <a href="/" class="goback-button">最初からやり直す</a>
+      </div>
+
+      <div class="quiz-question-number"></div>
+      <h2 class="quiz-question"></h2>
+      <p class="quiz-timer">00:00.00</p>
+      <ul class="quiz-answer">
+        <li>
+        <label class="quiz-button button01">
+          <input name="radio" type="radio" value="1">
+          <span class="quiz-text01"></span>
+        </label>
+        </li>
+        <li>
+          <label class="quiz-button button02">
+            <input name="radio" type="radio" value="2">
+            <span class="quiz-text02"></span>
+          </label>
+        </li>
+        <li>
+          <label class="quiz-button button03">
+            <input name="radio" type="radio" value="3">
+            <span class="quiz-text03"></span>
+          </label>
+        </li>
+        <li>
+          <label class="quiz-button button04">
+            <input name="radio" type="radio" value="4">
+            <span class="quiz-text04"></span>
+          </label>
+        </li>
+        <li>
+          <label class="quiz-button button05">
+            <input name="radio" type="radio" value="5">
+            <span class="quiz-text05"></span>
+          </label>
+        </li>
+        <li>
+          <label class="quiz-button button06">
+            <input name="radio" type="radio" value="6">
+            <span class="quiz-text06"></span>
+          </label>
+        </li>
+        <li>
+          <label class="quiz-button button07">
+            <input name="radio" type="radio" value="7">
+            <span class="quiz-text07"></span>
+          </label>
+        </li>
+        <li>
+          <label class="quiz-button button08">
+            <input name="radio" type="radio" value="8">
+            <span class="quiz-text08"></span>
+          </label>
+        </li>
+        <li>
+          <label class="quiz-button button09">
+            <input name="radio" type="radio" value="9">
+            <span class="quiz-text09"></span>
+          </label>
+        </li>
+      </ul>
+    </div>
+  </div>
+</main>
+<audio id="audio-correct">
+  <source src="asset/audio/correct.mp3" type="audio/mp3">
+</audio>
+<audio id="audio-incorrect">
+  <source src="asset/audio/incorrect.mp3" type="audio/mp3">
+</audio>
+<script src="asset/js/jquery-3.7.0.min.js"></script>
+<script src="asset/js/common.js"></script>
+</body>
+</html>
