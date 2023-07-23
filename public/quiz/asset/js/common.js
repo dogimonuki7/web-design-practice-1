@@ -26,30 +26,34 @@
 
   function updateTimer() {
     const timerElement = document.getElementById('timer');
-    const seconds = (timeCnt / 1000).toFixed(2);
+    const seconds = (timeCnt / 1000).toFixed(1);
     timerElement.textContent = seconds;
 
-    if (timeCnt <= 5000) {
-      timerElement.style.color = 'black'; // 残り時間が5秒以上なら文字色を元に戻す
-      timerElement.style.fontSize = '16px'; // 残り時間が5秒以上なら文字サイズを元に戻す
+    if (timeCnt <= 3000) {
+      timerElement.style.color = 'black';
+      timerElement.style.fontSize = '16px';
       timerElement.style.fontWeight = "normal";
+    } else if (timeCnt <= 5000 && timeCnt > 3000) {
+      timerElement.style.color = 'black';
+      timerElement.style.fontSize = '18px';
+      timerElement.style.fontWeight = "bold";
     } else {
-      timerElement.style.color = 'red'; // 残り時間が5秒以下なら文字色を赤にする
-      timerElement.style.fontSize = '24px'; // 残り時間が5秒以下なら文字サイズを大きくする
+      timerElement.style.color = 'red';
+      timerElement.style.fontSize = '24px';
       timerElement.style.fontWeight = "bold";
     }
   }
 
   function startTimer() {
     timerInterval = setInterval(function() {
-      timeCnt += 10; // 100ミリ秒加算
+      timeCnt += 100; // 100ミリ秒加算
       if (timeCnt >= maxTimer) {
         clearInterval(timerInterval); // タイマー停止
         document.getElementById('timer').textContent = '10秒を超えたよ'; // タイマー表示を0にする
       } else {
         updateTimer(); // タイマーを更新
       }
-    }, 10); // 100ミリ秒ごとに更新
+    }, 100); // 100ミリ秒ごとに更新
   }
 
   function stopTimer() {
@@ -57,7 +61,6 @@
   }
 
   function setTimer() {
-    // 新しい問題に入った時にタイマーをリセット
     timeCnt = 0;
     updateTimer();
     startTimer();
@@ -66,6 +69,8 @@
 
   let questionObject = (function () {
     let Obj = function ($target) {
+
+      this.$stratButton = $target.find('#start-btn')
 
       //質問の番号
       this.$questionNumber = $target.find('.quiz-question-number');
@@ -105,9 +110,9 @@
         let _this = this;
         let score = 0;
 
-        //ウインドウ読み込み時
-        $(window).on('load', function () {
-          //次の質問に切り替える
+        // スタートボタンクリック
+        this.$stratButton.on("click", function () {
+          $('.quiz-start').addClass('display-none');
           _this.changeQuestion();
         });
 
@@ -141,7 +146,11 @@
           
           if (quest_val1 === (quest_val2 + ans)) {
             $(this).parents('.quiz-answer').addClass('is-correct');
-            document.getElementById('audio-correct').play();
+            if (timeCnt <= 3000) {
+              document.getElementById('audio-correct3').play();
+            } else {
+              document.getElementById('audio-correct').play();
+            }
             score = score + $pointPerCorrect;
           } else {
             $(this).parents('.quiz-answer').addClass('is-incorrect');
