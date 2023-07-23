@@ -103,7 +103,6 @@
           }
           $(this).addClass('is-checked');
 
-          _this.$questionButton.off('mouseenter mouseleave');
           _this.showAnswer();
 
           if ($currentNum + 1 == $questionTotalNum) {

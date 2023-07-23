@@ -97,12 +97,14 @@
       border-radius: 12px;
       white-space: pre-wrap;
       cursor: pointer;
-      &:hover {
-        background-color: rgba(12, 100, 188, 0.12);
-      }
       &.is-checked {
         pointer-events: none;
         box-shadow: 0 0 0 4px #498bcd;
+      }
+      @media (hover: hover) {
+        &:hover {
+          background-color: rgba(12, 100, 188, 0.12);
+        }  
       }
     }
     &::after {
