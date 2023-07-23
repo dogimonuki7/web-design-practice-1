@@ -103,6 +103,7 @@
           }
           $(this).addClass('is-checked');
 
+          _this.$questionButton.off('mouseenter mouseleave');
           _this.showAnswer();
 
           if ($currentNum + 1 == $questionTotalNum) {
@@ -114,8 +115,6 @@
             setTimeout(function () {
               //現在の数字の更新
               $currentNum = $currentNum + 1;
-
-              $(this).off('mouseenter mouseleave');
 
               //次の質問に切り替える
               _this.changeQuestion();
