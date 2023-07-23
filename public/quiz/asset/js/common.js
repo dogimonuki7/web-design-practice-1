@@ -20,6 +20,50 @@
     quest_val2 = Math.floor(Math.random() * (quest_val1 - 1)) + 1;
   }
 
+  let timeCnt = 0; // 制限時間カウント
+  let maxTimer = 10 * 1000; // 制限時間（15秒）
+  let timerInterval; // setInterval の ID
+
+  function updateTimer() {
+    const timerElement = document.getElementById('timer');
+    const seconds = (timeCnt / 1000).toFixed(1);
+    timerElement.textContent = seconds;
+
+    if (timeCnt <= 5000) {
+      timerElement.style.color = 'black'; // 残り時間が5秒以上なら文字色を元に戻す
+      timerElement.style.fontSize = '16px'; // 残り時間が5秒以上なら文字サイズを元に戻す
+      timerElement.style.fontWeight = "normal";
+    } else {
+      timerElement.style.color = 'red'; // 残り時間が5秒以下なら文字色を赤にする
+      timerElement.style.fontSize = '24px'; // 残り時間が5秒以下なら文字サイズを大きくする
+      timerElement.style.fontWeight = "bold";
+    }
+  }
+
+  function startTimer() {
+    timerInterval = setInterval(function() {
+      timeCnt += 100; // 100ミリ秒加算
+      if (timeCnt >= maxTimer) {
+        clearInterval(timerInterval); // タイマー停止
+        document.getElementById('timer').textContent = '10秒を超えたよ'; // タイマー表示を0にする
+      } else {
+        updateTimer(); // タイマーを更新
+      }
+    }, 100); // 100ミリ秒ごとに更新
+  }
+
+  function stopTimer() {
+    clearInterval(timerInterval); // タイマー停止
+  }
+
+  function setTimer() {
+    // 新しい問題に入った時にタイマーをリセット
+    timeCnt = 0;
+    updateTimer();
+    startTimer();
+  }
+
+
   let questionObject = (function () {
     let Obj = function ($target) {
 
@@ -149,6 +193,8 @@
         //質問番号を1つ増やす
         let numPlusOne = $currentNum + 1;
         _this.$questionNumber.text('問題 ' + numPlusOne);
+
+        setTimer();
       },
 
       showAnswer: function () {
