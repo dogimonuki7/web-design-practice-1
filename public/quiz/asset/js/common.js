@@ -49,7 +49,7 @@
       timeCnt += 100; // 100ミリ秒加算
       if (timeCnt >= maxTimer) {
         clearInterval(timerInterval); // タイマー停止
-        document.getElementById('timer').textContent = '10秒を超えたよ'; // タイマー表示を0にする
+        document.getElementById('timer').textContent = '10秒(秒)オーバー'; // タイマー表示を0にする
       } else {
         updateTimer(); // タイマーを更新
       }
