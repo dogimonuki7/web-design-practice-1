@@ -10,6 +10,7 @@
 
   //得点
   let $pointPerCorrect = 10;
+  let $pointPerCorrectHalf = 5;
 
   var quest_val1 = 0;
   var quest_val2 = 0;
@@ -145,13 +146,24 @@
           }
           
           if (quest_val1 === (quest_val2 + ans)) {
+            // $(this).parents('.quiz-answer').addClass('is-correct');
+            // if (timeCnt <= 3000) {
+            //   document.getElementById('audio-correct3').play();
+            // } else {
+            //   document.getElementById('audio-correct').play();
+            // }
+            // score = score + $pointPerCorrect;
+
             $(this).parents('.quiz-answer').addClass('is-correct');
             if (timeCnt <= 3000) {
+              // 3秒以内だと10点
               document.getElementById('audio-correct3').play();
+              score = score + $pointPerCorrect;
             } else {
+              // 3秒オーバーだと5点
               document.getElementById('audio-correct').play();
+              score = score + $pointPerCorrectHalf;
             }
-            score = score + $pointPerCorrect;
           } else {
             $(this).parents('.quiz-answer').addClass('is-incorrect');
             document.getElementById('audio-incorrect').play();
