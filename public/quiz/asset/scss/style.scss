@@ -78,13 +78,35 @@ body {
       opacity: 0.5;
     }
   }
-  &.is-correctHalf {
+  &.is-correct8 {
+    .checked {
+      background: #ffbe82;
+    }
+    &::before {
+      white-space: pre;
+      content: "〇\A（8点）";
+      color: #ffbe82;
+      opacity: 0.5;
+    }
+  }
+  &.is-correct5 {
     .checked {
       background: #ffbe82;
     }
     &::before {
       white-space: pre;
       content: "〇\A（5点）";
+      color: #ffbe82;
+      opacity: 0.5;
+    }
+  }
+  &.is-correct3 {
+    .checked {
+      background: #ffbe82;
+    }
+    &::before {
+      white-space: pre;
+      content: "〇\A（3点）";
       color: #ffbe82;
       opacity: 0.5;
     }
@@ -216,6 +238,14 @@ body {
       background: #cee0f2;
       transition: .3s;
     }
+  }
+
+  aside {
+    padding: 1.5rem;
+    border-radius: 12px;
+    background: #F4F5F6;
+    margin: 0 1.5rem;
+    text-align: left;
   }
 }
 

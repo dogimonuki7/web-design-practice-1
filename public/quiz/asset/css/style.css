@@ -77,12 +77,30 @@ body {
   color: #ffb3b3;
   opacity: 0.5;
 }
-.quiz-answer.is-correctHalf .checked {
+.quiz-answer.is-correct8 .checked {
   background: #ffbe82;
 }
-.quiz-answer.is-correctHalf::before {
+.quiz-answer.is-correct8::before {
+  white-space: pre;
+  content: "〇\a（8点）";
+  color: #ffbe82;
+  opacity: 0.5;
+}
+.quiz-answer.is-correct5 .checked {
+  background: #ffbe82;
+}
+.quiz-answer.is-correct5::before {
   white-space: pre;
   content: "〇\a（5点）";
+  color: #ffbe82;
+  opacity: 0.5;
+}
+.quiz-answer.is-correct3 .checked {
+  background: #ffbe82;
+}
+.quiz-answer.is-correct3::before {
+  white-space: pre;
+  content: "〇\a（3点）";
   color: #ffbe82;
   opacity: 0.5;
 }
@@ -208,6 +226,13 @@ body {
 .quiz-start button:hover {
   background: #cee0f2;
   transition: 0.3s;
+}
+.quiz-start aside {
+  padding: 1.5rem;
+  border-radius: 12px;
+  background: #F4F5F6;
+  margin: 0 1.5rem;
+  text-align: left;
 }
 
 .finish {

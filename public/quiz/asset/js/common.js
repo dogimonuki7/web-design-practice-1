@@ -9,8 +9,10 @@
   let $currentNum = 0;
 
   //得点
-  let $pointPerCorrect = 10;
-  let $pointPerCorrectHalf = 5;
+  let $pointPerCorrect10 = 10;
+  let $pointPerCorrect8 = 8;
+  let $pointPerCorrect5 = 5;
+  let $pointPerCorrect3 = 3;
 
   var quest_val1 = 0;
   var quest_val2 = 0;
@@ -158,12 +160,22 @@
               // 3秒以内だと10点
               $(this).parents('.quiz-answer').addClass('is-correct');
               document.getElementById('audio-correct3').play();
-              score = score + $pointPerCorrect;
-            } else {
-              // 3秒オーバーだと5点
-              $(this).parents('.quiz-answer').addClass('is-correctHalf');
+              score = score + $pointPerCorrect10;
+            } else if (3000 < timeCnt && timeCnt <= 5000) {
+              // 3秒〜5秒だと8点
+              $(this).parents('.quiz-answer').addClass('is-correct8');
               document.getElementById('audio-correct').play();
-              score = score + $pointPerCorrectHalf;
+              score = score + $pointPerCorrect8;
+            } else if (5000 < timeCnt && timeCnt < 10000) {
+              // 5秒〜10秒だと5点
+              $(this).parents('.quiz-answer').addClass('is-correct5');
+              document.getElementById('audio-correct').play();
+              score = score + $pointPerCorrect5;
+            } else {
+              // 10秒オーバーだと3点
+              $(this).parents('.quiz-answer').addClass('is-correct3');
+              document.getElementById('audio-correct').play();
+              score = score + $pointPerCorrect3;
             }
           } else {
             $(this).parents('.quiz-answer').addClass('is-incorrect');
@@ -188,7 +200,7 @@
 
               //クラスを取る
               _this.$questionButton.removeClass('is-checked');
-              $('.quiz-answer').removeClass('is-correct').removeClass('is-correctHalf').removeClass('is-incorrect');
+              $('.quiz-answer').removeClass('is-correct').removeClass('is-correct8').removeClass('is-correct5').removeClass('is-correct3').removeClass('is-incorrect');
 
             }, 2000);
           }
