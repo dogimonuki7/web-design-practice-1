@@ -154,13 +154,14 @@
             // }
             // score = score + $pointPerCorrect;
 
-            $(this).parents('.quiz-answer').addClass('is-correct');
             if (timeCnt <= 3000) {
               // 3秒以内だと10点
+              $(this).parents('.quiz-answer').addClass('is-correct');
               document.getElementById('audio-correct3').play();
               score = score + $pointPerCorrect;
             } else {
               // 3秒オーバーだと5点
+              $(this).parents('.quiz-answer').addClass('is-correctHalf');
               document.getElementById('audio-correct').play();
               score = score + $pointPerCorrectHalf;
             }
@@ -187,7 +188,7 @@
 
               //クラスを取る
               _this.$questionButton.removeClass('is-checked');
-              $('.quiz-answer').removeClass('is-correct').removeClass('is-incorrect');
+              $('.quiz-answer').removeClass('is-correct').removeClass('is-correctHalf').removeClass('is-incorrect');
 
             }, 2000);
           }

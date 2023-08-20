@@ -54,9 +54,9 @@ body {
 }
 .quiz-answer::before {
   position: absolute;
-  width: 200px;
-  height: 200px;
-  font-size: 200px;
+  width: 400px;
+  height: 600px;
+  font-size: 80px;
   opacity: 0.7;
   top: -40px;
   left: 0;
@@ -72,15 +72,26 @@ body {
   background: #ffb3b3;
 }
 .quiz-answer.is-correct::before {
-  content: "〇";
+  white-space: pre;
+  content: "〇\a（10点）";
   color: #ffb3b3;
+  opacity: 0.5;
+}
+.quiz-answer.is-correctHalf .checked {
+  background: #ffbe82;
+}
+.quiz-answer.is-correctHalf::before {
+  white-space: pre;
+  content: "〇\a（5点）";
+  color: #ffbe82;
   opacity: 0.5;
 }
 .quiz-answer.is-incorrect .checked {
   background: #b3c7ff;
 }
 .quiz-answer.is-incorrect::before {
-  content: "×";
+  white-space: pre;
+  content: "×\a（0点）";
   color: #b3c7ff;
 }
 .quiz-answer li {
